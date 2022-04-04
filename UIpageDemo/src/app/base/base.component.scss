@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&family=Smooch+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald&display=swap');
+
+
+.backImg {
+    background: url(onee2.jpg) center fixed no-repeat;
+     width:  1536px;
+     height:  864px;
+}
+.navbar{
+    border-bottom: solid white 4px;
+}
+.one{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.two{
+    color: rgba($color: #0A7373, $alpha: 1.0)  !important;
+}
+// .navbar-brand{
+//     color: rgba($color: #035AA6, $alpha: 1.0)  !important;
+// }
+.nav-link, .navbar-collapse{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color:#e7ecef, $alpha: 1.0)  !important;
+}
+.nav-link:focus{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.nav-link:hover{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.navbar-toggler{
+    color: rgba($color: #e7ecef, $alpha: 1.0)  !important;
+}
+.Maintext1{
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    color: #e7ecef;
+}
+.Maintext2{
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    color: #DE1616
+}
+.Subtext1{
+    font-family: 'Montserrat', sans-serif;
+    color: #e7ecef;
+}
+.undLinePhrase{
+    color: #e7ecef;
+    text-decoration: underline;
+}
+.undLinePhrase:hover{
+    cursor: pointer;
+    color: #e7ecef;
+    text-decoration: underline;
+}
+
+

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&family=Smooch+Sans&display=swap');
+.backImg {
+    background-color: #e8e8e4;  
+}
+.one{
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.two{
+    color: rgba($color: #3f37c9, $alpha: 1.0)  !important;
+}
+// .navbar-brand{
+//     color: rgba($color: #035AA6, $alpha: 1.0)  !important;
+// }
+.nav-link, .navbar-collapse{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color:#e7ecef, $alpha: 1.0)  !important;
+}
+.nav-link:focus{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.nav-link:hover{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.navbar-toggler{
+    color: rgba($color: #e7ecef, $alpha: 1.0)  !important;
+}
+.maintextA{
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+}
+.maintextS1{
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+}
+.maintext3{
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    color: #DE1616;
+}
+.Maintext1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline;
+    color: #3a0ca3;
+}
+.Maintext2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline;
+    color: #DE1616
+}
+.Subtext1{
+    font-family: 'Montserrat', sans-serif;
+    color: #343a40;
+}
+.card-body{
+    background-color: #e9ecef;
+}
+.newNav{
+    .nav-item{
+        font-family: 'Montserrat', sans-serif;
+        .btn:hover{
+            color: #fdc500;
+        }
+        background-color: #e8e8e4;
+    }
+    .nav-item:hover{
+        font-family: 'Montserrat', sans-serif;
+        background-color: #d8e2dc;
+    }
+
+}
+.card{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.card-img-top {
+    background: url() center fixed no-repeat;
+    width: 18rem;
+    height: 12vw;
+    object-fit: cover;
+}
+.ListCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

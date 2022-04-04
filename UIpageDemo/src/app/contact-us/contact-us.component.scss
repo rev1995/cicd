@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&family=Smooch+Sans&display=swap');
+.backImg {
+    background-color: #6F7488;
+    width:  1536px;
+    height:  864px;
+}
+.navbar{
+    // opacity: 0.6;
+    // border-bottom: solid white 4px;
+}
+.one{
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.two{
+    color: rgba($color: #3f37c9, $alpha: 1.0)  !important;
+}
+.nav-link, .navbar-collapse{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color:#e7ecef, $alpha: 1.0)  !important;
+}
+.nav-link:focus{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.nav-link:hover{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.navbar-toggler{
+    color: rgba($color: #e7ecef, $alpha: 1.0)  !important;
+}
+.maintextA{
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+}
+.maintextS1{
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+}
+.maintext3{
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    color: #DE1616;
+}
+.Maintext1{
+    font-family: 'Montserrat', sans-serif;
+    display: inline;
+    color: #3a0ca3;
+}
+.Maintext2{
+    font-family: 'Montserrat', sans-serif;
+    display: inline;
+    color: #DE1616
+}
+.Subtext1{
+    font-family: 'Montserrat', sans-serif;
+    color: #343a40;
+}
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+$red: #e74c3c;
+
+.formBody {
+  background: #6F7488;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+   text-align: center;
+   color: #a8a8a8;
+}
+
+form {
+   max-width: 600px;
+   text-align: left;
+   margin: 20px auto;
+  
+  input, textarea {
+     border:0; outline:0;
+     padding: 1em;
+     border-radius : 8px;
+     display: block;
+     width: 100%;
+     margin-top: 1em;
+     font-family: 'Montserrat', sans-serif;
+     box-shadow: 0 1px 1px rgba(black, 0.1);
+     resize: none;
+    
+    &:focus {
+    box-shadow: 0 0px 2px rgba($red, 1) !important;
+    }
+  }
+  
+  #input-submit {
+     color: white; 
+     background: $red;
+     cursor: pointer;
+    
+    &:hover {
+    box-shadow: 0 1px 1px 1px rgba(#aaa, 0.6); 
+    }
+  }
+  
+  textarea {
+      width: 200%;
+      height: 226px;
+      margin: auto;
+  }
+}
+
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.left {
+     margin-left: 150px;
+     margin-right: 2%; 
+}
+
+@media (max-width: 600px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+.otherInfo{
+    .contactText{
+            font-family: Montserrat, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: rgba(247, 255, 235, 1);
+            text-transform: none;
+            font-style: italic;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 0px;
+            }
+}
+

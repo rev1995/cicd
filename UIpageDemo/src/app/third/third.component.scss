@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&family=Smooch+Sans&display=swap');
+.backImg {
+    background-color: #e8e8e4;
+    width:  1536px;
+    height:  864px;
+}
+.navbar{
+    // opacity: 0.6;
+    // border-bottom: solid white 4px;
+}
+.one{
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.two{
+    color: rgba($color: #3f37c9, $alpha: 1.0)  !important;
+}
+// .navbar-brand{
+//     color: rgba($color: #035AA6, $alpha: 1.0)  !important;
+// }
+.nav-link, .navbar-collapse{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color:#e7ecef, $alpha: 1.0)  !important;
+}
+.nav-link:focus{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.nav-link:hover{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+}
+.navbar-toggler{
+    color: rgba($color: #e7ecef, $alpha: 1.0)  !important;
+}
+.maintextA{
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+}
+.maintextS1{
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+}
+.maintext3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline;
+    color: #343a40;
+}
+.Maintext1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline;
+    color: #3a0ca3;
+}
+.Maintext2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline;
+    color: #DE1616
+}
+.Subtext1{
+    font-family: 'Montserrat', sans-serif;
+    color: #343a40;
+}
+.card-body{
+    background-color: #ffffff;
+}
+.card-img-top {
+    background: url(Cardsback.jpg) center fixed no-repeat;
+    width: 18rem;
+    height: 12vw;
+    object-fit: cover;
+}
+.card{
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
