@@ -1,5 +1,6 @@
 # Stage 1
-FROM node:latest AS node 
+FROM node:latest AS node
+# changing working directory 
 WORKDIR /app 
 COPY . .
 #installing npm modules
