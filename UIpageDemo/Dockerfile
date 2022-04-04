@@ -1,7 +1,8 @@
 # Stage 1
 FROM node:latest AS node 
 WORKDIR /app 
-COPY . . 
+COPY . .
+#installing npm modules
 RUN npm install
 RUN npm run build --prod
 
