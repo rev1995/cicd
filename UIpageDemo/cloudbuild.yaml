@@ -7,5 +7,5 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push','us-central1-docker.pkg.dev/endless-gamma-333908/cicd-repo/${_CONTAINERNAME}:${_VERSION}']
 
- options:
- logging: CLOUD_LOGGING_ONLY
+options:
+- logging: CLOUD_LOGGING_ONLY
