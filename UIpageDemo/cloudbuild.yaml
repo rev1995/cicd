@@ -7,7 +7,7 @@ steps:
   id: 'build-image-myapp'
   waitFor: ['-']  # The '-' indicates that this step begins immediately.
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gus-central1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA']
+  args: ['push', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA']
   id: 'push-image-to-artifact-registry'
   waitFor: ['build-image-myapp']
 - name: 'gcr.io/cloud-builders/gcloud'
@@ -16,7 +16,7 @@ steps:
   - 'deploy'
   - 'myawesomeapp'
   - '--image'
-  - 'us-central1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA'
+  - 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA'
   - '--region'
   - 'us-east4'
   - '--platform'
