@@ -1,5 +1,5 @@
 steps:
-#First Clone from Google Cloud Source Repository  
+#First Clone from Google Cloud Source Repository! 
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone','https://source.cloud.google.com/endless-gamma-333908/github_rev1995_cicd']
 - name: 'gcr.io/cloud-builders/docker'
