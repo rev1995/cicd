@@ -1,5 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/myproject/myimage', '.']
+  logsBucket: 'gs://mylogsbucket'
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
