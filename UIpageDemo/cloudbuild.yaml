@@ -3,7 +3,7 @@ steps:
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone','https://github.com/rev1995/cicd.git']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/rc:$BUILD_ID', '-f', 'cicd/UIpageDemo/Dockerfile', '.']
+  args: ['build', '-t', 'rc:$BUILD_ID', '-f', 'cicd/UIpageDemo/Dockerfile', '.']
   id: 'build-image-myapp'
   waitFor: ['-']  # The '-' indicates that this step begins immediately.
 - name: 'gcr.io/cloud-builders/docker'
