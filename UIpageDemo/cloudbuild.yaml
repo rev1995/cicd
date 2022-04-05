@@ -47,3 +47,5 @@ artifacts:
   objects:
     location: 'gs://devops-$PROJECT_ID/$BUILD_ID'
     paths: ['artifacts.tar.gz']
+options:
+  logging: CLOUD_LOGGING_ONLY
