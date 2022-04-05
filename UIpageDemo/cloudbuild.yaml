@@ -1,5 +1,5 @@
 steps:
-#First Clone from Google Cloud Source Repository! 
+#First Clone from Google Cloud Source Repository
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone','https://github.com/rev1995/cicd.git']
 - name: 'gcr.io/cloud-builders/docker'
