@@ -52,3 +52,4 @@ artifacts:
     paths: ['artifacts.tar.gz']
 options:
   logging: NONE
+  substitution_option: 'ALLOW_LOOSE'
