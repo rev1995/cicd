@@ -1,7 +1,7 @@
 steps:
 #First Clone from Google Cloud Source Repository! 
 - name: 'gcr.io/cloud-builders/git'
-  args: ['clone','https://source.cloud.google.com/endless-gamma-333908/github_rev1995_cicd']
+  args: ['clone','https://github.com/rev1995/cicd.git']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/rc:$BUILD_ID', '.']
   id: 'build-image-myapp'
