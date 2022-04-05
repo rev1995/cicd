@@ -51,5 +51,5 @@ artifacts:
     location: 'gs://devops-$PROJECT_ID/$BUILD_ID'
     paths: ['artifacts.tar.gz']
 options:
-  logging: NONE
+  #logging: NONE
   substitution_option: 'ALLOW_LOOSE'
