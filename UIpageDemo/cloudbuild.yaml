@@ -1,0 +1,56 @@
+steps:
+#First Clone from Google Cloud Source Repository
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone','https://source.developers.google.com/p/endless-gamma-333908/r/github_rev1995_cicd']
+  id: 'clone'
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'rc:$BUILD_ID', '-f', 'UIpageDemo/Dockerfile', '.']
+  id: 'build-image-myapp'
+  waitFor: ['clone']  # The '-' indicates that this step begins immediately.
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA']
+  id: 'push-image-to-artifact-registry'
+  waitFor: ['build-image-myapp']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'myawesomeapp'
+  - '--image'
+  - 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA'
+  - '--region'
+  - 'us-east4'
+  - '--platform'
+  - 'managed'
+  - '--allow-unauthenticated'
+  waitFor: ['push-image-to-artifact-registry']
+  id: 'deploy-to-cloud-run'
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+  volumes:
+  - name: 'vol1'
+    path: '/myawesomevolume'
+  entrypoint: '/bin/bash'
+  args: ['-c', 'gcloud builds log $BUILD_ID > /myawesomevolume/buildlog.log']
+  waitFor: ['deploy-to-cloud-run']
+  id: 'fetch-build-log'
+- name: 'bash'
+  volumes:
+  - name: 'vol1'
+    path: '/myawesomevolume'
+  args: ['tar', '-czvf', 'artifacts.tar.gz', 'app', 'requirements.txt', '/myawesomevolume/buildlog.log']
+  waitFor: ['fetch-build-log']
+  id: 'create-artifacts-zip'
+logsBucket: 'gs://mylogsbucket//$BUILD_ID'
+options:
+  logging: NONE
+#images:
+#- 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA/myapp:latest'
+#- 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA/myapp:$COMMIT_SHA'
+#- 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA/myapp:$BUILD_ID'
+artifacts:
+  objects:
+    location: 'gs://mylogsbucket/$BUILD_ID'
+    paths: ['artifacts.tar.gz']
+options:
+  #logging: NONE
+  substitution_option: 'ALLOW_LOOSE'
