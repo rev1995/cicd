@@ -1,7 +1,7 @@
 # Stage 1
 FROM node:latest AS node 
 WORKDIR /app 
-COPY . .
+COPY UIpageDemo .
 RUN npm install
 RUN npm run build --prod
 
