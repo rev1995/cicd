@@ -4,7 +4,7 @@ steps:
   args: ['clone','https://source.developers.google.com/p/endless-gamma-333908/r/github_rev1995_cicd']
   id: 'clone'
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'rc:$BUILD_ID', '-f', 'cicd/UIpageDemo/Dockerfile', '.']
+  args: ['build', '-t', 'rc:$BUILD_ID', 'cicd/UIpageDemo/Dockerfile', '.']
   id: 'build-image-myapp'
   waitFor: ['clone']  # The '-' indicates that this step begins immediately.
 - name: 'gcr.io/cloud-builders/docker'
