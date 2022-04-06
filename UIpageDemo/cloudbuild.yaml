@@ -41,7 +41,7 @@ steps:
   id: 'create-artifacts-zip'
 logsBucket: 'gs://mylogsbucket//$BUILD_ID'
 options:
-  logging: GCS_ONLY
+  logging: NONE
 images:
 - 'gus-central1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA/myapp:latest'
 - 'us-central1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA/myapp:$COMMIT_SHA'
