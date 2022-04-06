@@ -3,8 +3,8 @@ FROM node:latest AS node
 WORKDIR /app 
 COPY . .
 #installing npm modules
-RUN npm install
-RUN npm run build --prod
+RUN npm install || :
+RUN npm run build --prod || :
 
 # Stage 2
 FROM nginx:alpine
