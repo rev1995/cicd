@@ -26,14 +26,14 @@ steps:
   - '--allow-unauthenticated'
   waitFor: ['push-image-to-artifact-registry']
   id: 'deploy-to-cloud-run'
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
-  volumes:
-  - name: 'vol1'
-    path: '/myawesomevolume'
-  entrypoint: '/bin/bash'
-  args: ['-c', 'gcloud builds log $BUILD_ID > /myawesomevolume/buildlog.log']
-  waitFor: ['deploy-to-cloud-run']
-  id: 'fetch-build-log'
+#- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+#   volumes:
+#  - name: 'vol1'
+#    path: '/myawesomevolume'
+#  entrypoint: '/bin/bash'
+#  args: ['-c', 'gcloud builds log $BUILD_ID > /myawesomevolume/buildlog.log']
+#  waitFor: ['deploy-to-cloud-run']
+#  id: 'fetch-build-log'
 #- name: 'bash'
 #  volumes:
 #  - name: 'vol1'
