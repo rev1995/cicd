@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&family=Smooch+Sans&display=swap');
 .backImg {
     background-color: #e8e8e4;
-    width:  1536px;
-    height:  864px;
+    width: 100vw;
+   min-height: 100vh;
 }
 .navbar{
     // opacity: 0.6;

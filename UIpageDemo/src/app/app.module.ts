@@ -10,6 +10,7 @@ import { OurserviceComponent } from './ourServices/ourservice/ourservice.compone
 import { OurPrdouctsComponent } from './our-prdoucts/our-prdoucts.component';
 import { AllProductsComponent } from './our-prdoucts/all-products/all-products.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { MainNavbarComponent } from './main-navbar/main-navbar.component';
 
 const routes: Routes = [
   {
@@ -32,7 +33,8 @@ const routerOptions: ExtraOptions = {
     OurserviceComponent,
     OurPrdouctsComponent,
     AllProductsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    MainNavbarComponent
   ],
   imports: [
     BrowserModule,

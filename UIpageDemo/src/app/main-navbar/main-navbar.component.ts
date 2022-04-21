@@ -3,19 +3,16 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-base',
-  templateUrl: './base.component.html',
-  styleUrls: ['./base.component.scss']
+  selector: 'app-main-navbar',
+  templateUrl: './main-navbar.component.html',
+  styleUrls: ['./main-navbar.component.scss']
 })
-export class BaseComponent implements OnInit {
-  myImage: string = "/onee2.jpg"
-  width: number | undefined;
-  height: number | undefined;
-  constructor(private scroller: ViewportScroller, private router: Router) {}
+export class MainNavbarComponent implements OnInit {
+
+  constructor(private scroller: ViewportScroller) { }
 
   ngOnInit(): void {
   }
-  
   goDown1() {
     this.scroller.scrollToAnchor("aboutUS");
   }

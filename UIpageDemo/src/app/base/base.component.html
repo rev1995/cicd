@@ -1,73 +1,27 @@
-<div>
-    <div class="backImg">
-        <div class="container mx-5">
-            <nav class="navbar sticky-top navbar-expand-lg">
-                <div class="container-fluid justify-content-between">
-                    <a class="navbar-brand" href="#"><span class="one">RC</span><span class="two"> Ventures</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" (click)="goDown1()">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" (click)="goDown2()">Team</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" (click)="goDown3()">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" (click)="goDown4()">Products</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" (click)="goDown5()">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div class="container mt-4 maintexts text-center mx-5">
-            <h1 class="Maintext1 display-3">South India's leading Contributor of</h1>
-            <h1 class="Maintext2 display-3"> Material Handling Applications and Waste Management</h1>
-        </div>
-        <div class="container mt-5 mx-5">
-            <p class="Subtext1 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quasi
-                molestiae
-                velit cum qui odio reprehenderit, incidunt placeat saepe dicta rem similique illum animi dolorum. Sit
-                quaerat commodi unde cumque.
-                Voluptate excepturi tenetur nam eaque nemo, hic blanditiis recusandae est necessitatibus dicta obcaecati
-                esse, expedita corrupti nostrum facere quidem. Laudantium culpa nesciunt quae in molestias reiciendis
-                exercitationem at possimus error!
-                Repellat illo perspiciatis repellendus necessitatibus soluta? Repellat, ratione nam! Cum dolore
-                perferendis
-                dolores ducimus consequuntur et minima animi hic sit veritatis vel commodi ex itaque, quo corporis sequi
-                doloribus sunt.</p>
-            <p class="Subtext1 text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint ipsa
-                provident in
-                tempora aut cumque perspiciatis ducimus doloremque, nostrum rem, quibusdam modi enim voluptatem officia
-                repellat ea ab quam magni?
-                Incidunt, numquam non accusantium ea natus sunt officiis culpa itaque praesentium laboriosam, dolor nam
-                vero
-                sint sed impedit beatae ad eos accusamus dolore fugit repellat magnam esse recusandae tempore.
-                Accusamus.
-            </p>
-        </div>
-        <div class="mt-4">
-            <a (click)="goDown2()" class="undLinePhrase">
-                <p class="Subtext1 text-center">Who are we ?</p>
-            </a>
-        </div>
+<app-main-navbar></app-main-navbar>
+<div class="backImg">
+    <div class="container maintexts text-center mx-5">
+        <h2 class="Maintext1 d-block pt-5">South India's leading Contributor of </h2>
+        <h2 class="Maintext2 d-block"> Material Handling Applications and Waste Management</h2>
     </div>
-    <app-header id="aboutUS"></app-header>
-    <app-third id="whoveare"></app-third>
-    <app-ourservice id="Services"></app-ourservice>
-    <app-our-prdoucts id="product"></app-our-prdoucts>
-    <app-contact-us id="contactUs"></app-contact-us>
+    <div class="container mt-5 mx-5">
+        <p class="Subtext1 text-center">
+            We, RC Ventures are one of the leading distributors, and suppliers of various varieties of plastic crates,
+            industrial crates, dairy crates, bottle crates, fishery crates, fabricated crates, fruit crates, vegetable
+            crates roto giant crates, waste bins, injection moulded plastic pallets, waste trolleys, roto waste bin,
+            chill pads and roto moulded pallets. These are manufactured using quality virgin plastic and stainless steel
+            to ensure high durability and light weight for better handling. The promoters of RC Ventures have more than
+            2 decades of experience in this field, and also employ very experienced and professional personnel for all
+            customer requirements.</p>
+    </div>
+    <div class="mt-5 d-flex justify-content-center">
+        <button (click)="goDown2()" class="btn Nav-button">
+           Who We Are
+        </button>
+    </div>
 </div>
+<app-header id="aboutUS"></app-header>
+<app-third id="whoveare"></app-third>
+<app-ourservice id="Services"></app-ourservice>
+<app-our-prdoucts id="product"></app-our-prdoucts>
+<app-contact-us id="contactUs"></app-contact-us>

@@ -1,26 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&family=Smooch+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap');
 
 
 .backImg {
-    background: url(onee2.jpg) center fixed no-repeat;
-     width:  1536px;
-     height:  864px;
+    background-color: #b7dcee;
+    width:  100vw;
+    min-height: 100vh;
 }
 .navbar{
     border-bottom: solid white 4px;
 }
 .one{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+    color: rgba($color: #ed393c, $alpha: 1.0)  !important;
 }
 .two{
     color: rgba($color: #0A7373, $alpha: 1.0)  !important;
 }
-// .navbar-brand{
-//     color: rgba($color: #035AA6, $alpha: 1.0)  !important;
-// }
 .nav-link, .navbar-collapse{
     font-family: 'Montserrat', sans-serif;
     color: rgba($color:#e7ecef, $alpha: 1.0)  !important;
@@ -37,18 +35,18 @@
     color: rgba($color: #e7ecef, $alpha: 1.0)  !important;
 }
 .Maintext1{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Serif Pro', serif;
     display: inline;
-    color: #e7ecef;
+    color: #2a2b2c;
 }
 .Maintext2{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Serif Pro', serif;
     display: inline;
     color: #DE1616
 }
 .Subtext1{
     font-family: 'Montserrat', sans-serif;
-    color: #e7ecef;
+    color: #2a2b2c;
 }
 .undLinePhrase{
     color: #e7ecef;
@@ -58,6 +56,10 @@
     cursor: pointer;
     color: #e7ecef;
     text-decoration: underline;
+}
+.Nav-button{
+    background-color: #ed393c;
+    color: #e7ecef;
 }
 
 
