@@ -3,7 +3,6 @@ FROM node:latest AS node
 WORKDIR /app 
 COPY UIpageDemo .
 RUN npm install
-RUN npm audit fix
 RUN npm run build --prod
 
 # Stage 2
