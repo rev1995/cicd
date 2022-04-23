@@ -4,15 +4,15 @@ steps:
   args: ['clone','https://source.developers.google.com/p/endless-gamma-333908/r/github_rev1995_cicd']
   id: 'clone'
 # Build a docker image
- - name: 'gcr.io/cloud-builders/docker'
-   args: ['build', '-t', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID', '-f', 'UIpageDemo/Dockerfile', '.']
-   waitFor: ['clone'] 
-   id: ['Docker build']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID', '-f', 'UIpageDemo/Dockerfile', '.']
+  waitFor: ['clone'] 
+  id: ['Docker build']
 # Push the docker image to container registry
- - name: 'gcr.io/cloud-builders/docker'
-   args: ["push", "gus-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID"]
-   waitFor: ['docker build']
-   id: 'push-image-to-artifact-registry'
+- name: 'gcr.io/cloud-builders/docker'
+  args: ["push", "gus-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID"]
+  waitFor: ['docker build']
+  id: 'push-image-to-artifact-registry'
   waitFor: ['Docker build']
 # Deploying to Cloud Run  
 - name: 'gcr.io/cloud-builders/gcloud'
