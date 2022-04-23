@@ -3,19 +3,18 @@ steps:
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone','https://source.developers.google.com/p/endless-gamma-333908/r/github_rev1995_cicd']
   id: 'clone'
-# dockerizing the app
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID', '-f', 'UIpageDemo/Dockerfile', '.']
-  id: 'build-image-myapp'
-  #images:
-       #- 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA/myapp:latest'
-       #- 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA/myapp:$COMMIT_SHA'
-       #- 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$COMMIT_SHA/myapp:$BUILD_ID'
-  waitFor: ['clone'] 
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID']
-  id: 'push-image-to-artifact-registry'
-  waitFor: ['build-image-myapp']
+# Build a docker image
+ - name: 'gcr.io/cloud-builders/docker'
+   args: ['build', '-t', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID', '-f', 'UIpageDemo/Dockerfile', '.']
+   waitFor: ['clone'] 
+   id: ['Docker build']
+# Push the docker image to container registry
+ - name: 'gcr.io/cloud-builders/docker'
+   args: ["push", "gus-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID"]
+   waitFor: ['docker build']
+   id: 'push-image-to-artifact-registry'
+  waitFor: ['Docker build']
+# Deploying to Cloud Run  
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
   - 'run'
@@ -30,24 +29,3 @@ steps:
   - '--allow-unauthenticated'
   waitFor: ['push-image-to-artifact-registry']
   id: 'deploy-to-cloud-run'
-#- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
-#   volumes:
-#  - name: 'vol1'
-#    path: '/myawesomevolume'
-#  entrypoint: '/bin/bash'
-#  args: ['-c', 'gcloud builds log $BUILD_ID > /myawesomevolume/buildlog.log']
-#  waitFor: ['deploy-to-cloud-run']
-#  id: 'fetch-build-log'
-#- name: 'bash'
-#  volumes:
-#  - name: 'vol1'
-#    path: '/myawesomevolume'
-#  args: ['tar', '-czvf', 'artifacts.tar.gz', 'app', 'requirements.txt', '/myawesomevolume/buildlog.log']
-#  waitFor: ['fetch-build-log']
-#  id: 'create-artifacts-zip'
-logsBucket: 'gs://mylogsbucket//$BUILD_ID'
-options:
-  #logging: CLOUD_LOGGING_ONLY
-  logging: GCS_ONLY
-  substitution_option: 'ALLOW_LOOSE'
-
