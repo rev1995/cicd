@@ -1,20 +1,27 @@
 steps:
-# Clone from Google Cloud Source Repository
+#Clone from Google Cloud Source Repository
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone','https://source.developers.google.com/p/endless-gamma-333908/r/github_rev1995_cicd']
   id: 'clone'
-# Build a docker image
+
+#Installing dependencies
+- name: python
+  entrypoint: pip
+  args: ["install", "-r", "requirements.txt", "--user"]
+
+#Docker build
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID', '-f', 'UIpageDemo/Dockerfile', '.']
+  id: 'build-image-myapp'
   waitFor: ['clone'] 
-  id: ['Docker build']
-# Push the docker image to container registry
+
+#Push to Artifact registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["push", "gus-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID"]
-  waitFor: ['docker build']
+  args: ['push', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID']
   id: 'push-image-to-artifact-registry'
-  waitFor: ['Docker build']
-# Deploying to Cloud Run  
+  waitFor: ['build-image-myapp']
+
+#Deploy to cloud run
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
   - 'run'
@@ -29,3 +36,7 @@ steps:
   - '--allow-unauthenticated'
   waitFor: ['push-image-to-artifact-registry']
   id: 'deploy-to-cloud-run'
+logsBucket: 'gs://mylogsbucket//$BUILD_ID'
+options:
+  logging: GCS_ONLY
+  substitution_option: 'ALLOW_LOOSE'
