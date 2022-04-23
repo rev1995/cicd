@@ -3,7 +3,7 @@ steps:
   - name: 'gcr.io/cloud-builders/git'
     args: ['clone','https://source.developers.google.com/p/endless-gamma-333908/r/github_rev1995_cicd']
     id: 'clone'
-logsBucket: 'gs://mylogsbucket//$BUILD_ID'
+logsBucket: 'gs://mylogsbucket'
 options:
   logging: GCS_ONLY
   substitution_option: 'ALLOW_LOOSE'
