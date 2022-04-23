@@ -1,5 +1,5 @@
 steps:
-#Clone from Google Cloud Source Repository
+#Clone from Google Cloud Source Repo
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone','https://source.developers.google.com/p/endless-gamma-333908/r/github_rev1995_cicd']
   id: 'clone'
