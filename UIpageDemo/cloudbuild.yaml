@@ -7,3 +7,4 @@ logsBucket: 'gs://mylogsbucket//$BUILD_ID'
 options:
   logging: GCS_ONLY
   substitution_option: 'ALLOW_LOOSE'
+  #hello
