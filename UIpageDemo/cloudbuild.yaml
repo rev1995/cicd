@@ -1,10 +1,16 @@
 steps:
-#Clone from Google Cloud Source Repository
-  - name: 'gcr.io/cloud-builders/git'
-    args: ['clone','https://source.developers.google.com/p/endless-gamma-333908/r/github_rev1995_cicd']
-    id: 'clone'
-logsBucket: 'gs://mylogsbucket//$BUILD_ID'
+#First Clone from Google Cloud Source Repository  
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone','https://source.developers.google.com/p/endless-gamma-333908/r/github_rev1995_cicd']
+  id: 'clone'
+#Build the image 
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID', '-f', 'UIpageDemo/Dockerfile', '.']
+  waitFor: ['clone']
+  id: 'build'
+#Push the image  
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID']
+  waitFor: ['build']
 options:
-  logging: GCS_ONLY
-  substitution_option: 'ALLOW_LOOSE'
-  #hello
+    substitution_option: 'ALLOW_LOOSE'
