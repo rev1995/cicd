@@ -47,7 +47,7 @@ steps:
 #  id: 'create-artifacts-zip'
 #logsBucket: 'gs://mylogsbucket//$BUILD_ID'
 options:
-  logging: NONE
+  logging: CLOUD_LOGGING_ONLY
   #logging: GCS_ONLY
   substitution_option: 'ALLOW_LOOSE'
 
