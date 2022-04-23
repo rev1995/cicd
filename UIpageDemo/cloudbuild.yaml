@@ -12,5 +12,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID']
   waitFor: ['build']
+  location: gs://${_BUCKET_NAME}/
 options:
     substitution_option: 'ALLOW_LOOSE'
