@@ -1,87 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&family=Smooch+Sans&display=swap');
+
 .backImg {
-    background-color: #e8e8e4;  
+    width: 100vw;
+    min-height: 100vh;
+    background: rgb(233, 236, 239);
+    background: linear-gradient(90deg, rgba(233, 236, 239, 1) 0%, rgba(222, 226, 230, 1) 35%, rgba(173, 181, 189, 1) 100%);
 }
-.one{
-    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+
+.one {
+    color: rgba($color: #DE1616, $alpha: 1.0) !important;
 }
-.two{
-    color: rgba($color: #3f37c9, $alpha: 1.0)  !important;
+
+.two {
+    color: rgba($color: #3f37c9, $alpha: 1.0) !important;
 }
+
 // .navbar-brand{
 //     color: rgba($color: #035AA6, $alpha: 1.0)  !important;
 // }
-.nav-link, .navbar-collapse{
+.nav-link,
+.navbar-collapse {
     font-family: 'Montserrat', sans-serif;
-    color: rgba($color:#e7ecef, $alpha: 1.0)  !important;
+    color: rgba($color:#e7ecef, $alpha: 1.0) !important;
 }
-.nav-link:focus{
+
+.nav-link:focus {
     font-family: 'Montserrat', sans-serif;
-    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+    color: rgba($color: #DE1616, $alpha: 1.0) !important;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     font-family: 'Montserrat', sans-serif;
-    color: rgba($color: #DE1616, $alpha: 1.0)  !important;
+    color: rgba($color: #DE1616, $alpha: 1.0) !important;
 }
-.navbar-toggler{
-    color: rgba($color: #e7ecef, $alpha: 1.0)  !important;
+
+.navbar-toggler {
+    color: rgba($color: #e7ecef, $alpha: 1.0) !important;
 }
-.maintextA{
+
+.maintextA {
     font-family: 'Roboto', sans-serif;
     display: inline;
 }
-.maintextS1{
+
+.maintextS1 {
     font-family: 'Roboto', sans-serif;
     display: inline;
 }
-.maintext3{
+
+.maintext3 {
     font-family: 'Roboto', sans-serif;
     display: inline;
     color: #DE1616;
 }
-.Maintext1{
+
+.Maintext1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: inline;
     color: #3a0ca3;
 }
-.Maintext2{
+
+.Maintext2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: inline;
     color: #DE1616
 }
-.Subtext1{
+
+.Subtext1 {
     font-family: 'Montserrat', sans-serif;
     color: #343a40;
 }
-.card-body{
+
+.card-body {
     background-color: #e9ecef;
 }
-.newNav{
-    .nav-item{
-        font-family: 'Montserrat', sans-serif;
-        .btn:hover{
-            color: #fdc500;
+
+.newNav {
+    background-color: #ced4da;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .nav-item {
+        font-family: 'Montserrat';
+
+        .btn:hover {
+            color: #a4161a;
+            background-color: #adb5bd;
         }
-        background-color: #e8e8e4;
     }
-    .nav-item:hover{
-        font-family: 'Montserrat', sans-serif;
-        background-color: #d8e2dc;
+
+    .nav-item:hover {
+        color: #a4161a;
+        font-family: 'Montserrat';
+        background-color: #adb5bd;
+    }
+
+    .nav-item:active {
+        color: #a4161a;
+        font-family: 'Montserrat';
+        background-color: #adb5bd;
     }
 
 }
-.card{
+
+.pageTitle {
+    margin-top: 40px;
+    font-family: 'Source Serif Pro', serif;
+    background: rgb(173, 181, 189);
+    background: linear-gradient(90deg, rgba(173, 181, 189, 1) 0%, rgba(233, 236, 239, 1) 35%, rgba(173, 181, 189, 1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pageTitleText1 {
+    color: #DE1616;
+}
+
+.card {
     border-radius: 5px 5px 5px 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+
 .card-img-top {
     background: url() center fixed no-repeat;
     width: 18rem;
     height: 12vw;
     object-fit: cover;
 }
-.ListCards{
+
+.ListCards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

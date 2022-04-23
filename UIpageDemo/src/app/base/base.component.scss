@@ -34,18 +34,20 @@
 .navbar-toggler{
     color: rgba($color: #e7ecef, $alpha: 1.0)  !important;
 }
-.Maintext1{
+.maintexts{
     font-family: 'Source Serif Pro', serif;
+    width: 100%;
+}
+.Maintext1{
     display: inline;
     color: #2a2b2c;
 }
 .Maintext2{
-    font-family: 'Source Serif Pro', serif;
     display: inline;
     color: #DE1616
 }
 .Subtext1{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     color: #2a2b2c;
 }
 .undLinePhrase{
@@ -61,5 +63,10 @@
     background-color: #ed393c;
     color: #e7ecef;
 }
+.navBtnAlign {
+    padding-top: 50px;
+}
 
-
+.textContent {
+    padding-top: 250px;
+}

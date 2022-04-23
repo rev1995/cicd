@@ -2,11 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&family=Smooch+Sans&display=swap');
 
 .backImg {
-    background-color: #6F7488;
+    background: rgb(233, 236, 239);
+    background: linear-gradient(90deg, rgba(233, 236, 239, 1) 0%, rgba(222, 226, 230, 1) 35%, rgba(173, 181, 189, 1) 100%);
     width: 100vw;
-    min-height: 100vh;
-    position: relative;
-    top: 65px;
+    min-height: 100%;
+}
+
+.pageTitle {
+    margin-top: 40px;
+    font-family: 'Source Serif Pro', serif;
+    background: rgb(173, 181, 189);
+    background: linear-gradient(90deg, rgba(173, 181, 189, 1) 0%, rgba(233, 236, 239, 1) 35%, rgba(173, 181, 189, 1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pageTitleText1 {
+    color: #DE1616;
+}
+
+.pageTitleText2 {
+    color: black;
 }
 
 .one {
@@ -150,7 +165,6 @@ form {
         font-family: Montserrat, sans-serif;
         font-size: 20px;
         font-weight: 500;
-        color: rgba(247, 255, 235, 1);
         text-transform: none;
         font-style: italic;
         text-decoration: none;

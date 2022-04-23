@@ -1,15 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&family=Smooch+Sans&display=swap');
 .backImg {
-    background-color: #212529;
+    background-color: #333333;
     width: 100vw;
     min-height: 100vh;
-    position: relative;
-    top: 65px;
 }
-.navbar{
-    // opacity: 0.6;
-    // border-bottom: solid white 4px;
+.pageTitle {
+    margin-top: 40px;
+    font-family: 'Source Serif Pro', serif;
+    background: rgb(51,51,51);
+    background: linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(73,80,87,1) 35%, rgba(51,51,51,1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pageTitleText1 {
+    color: #DE1616;
+}
+.pageTitleText2{
+    color:  rgb(173, 181, 189);
 }
 .one{
     color: rgba($color: #DE1616, $alpha: 1.0)  !important;
