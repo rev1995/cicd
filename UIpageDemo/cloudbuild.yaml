@@ -35,7 +35,7 @@ steps:
 #logsBucket: 'gs://mylogsbucket//$BUILD_ID'
 options:
   #logging: GCS_ONLY
-  logging: CLOUD_LOGGING_ONLY
+  #logging: CLOUD_LOGGING_ONLY
   substitution_option: 'ALLOW_LOOSE'
 
 #images:
