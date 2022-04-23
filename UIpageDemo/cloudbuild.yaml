@@ -12,6 +12,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID']
   waitFor: ['build']
-logsBucket: 'gs://mylogsbucket//$BUILD_ID'
+#logsBucket: 'gs://mylogsbucket//$BUILD_ID'
 options:
+    logging: GCS_ONLY
     substitution_option: 'ALLOW_LOOSE'
