@@ -32,7 +32,7 @@ steps:
   waitFor: ['push-image-to-artifact-registry']
   id: 'deploy-to-cloud-run'
 
-logsBucket: 'gs://mylogsbucket//$BUILD_ID'
+#logsBucket: 'gs://mylogsbucket//$BUILD_ID'
 options:
   #logging: GCS_ONLY
   logging: CLOUD_LOGGING_ONLY
