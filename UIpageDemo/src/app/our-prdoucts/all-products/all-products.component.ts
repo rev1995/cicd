@@ -39,6 +39,13 @@ export class AllProductsComponent implements OnInit {
   selected_product = {"Name": "Product Name", "product_info": [], "product_title": "", "product_description": "", "icon": ""};
   selected_product_type = {"product_type_name": "", "product_type_key": ""}
 
+  product_type_selected = false;
+  product_type_l1_selected = false;
+  product_type_l2_selected = false;
+  product_type_key_selected = "";
+  product_type_key_l1_selected = "";
+  product_type_key_l2_selected = "";
+
   openPopup(item: any) {
     this.selectedImageIndex = 0;
     this.displayStyle = "block";
@@ -49,9 +56,22 @@ export class AllProductsComponent implements OnInit {
   }
 
   selectProductType(item: any){
-    this.selected_product_type = item;
-    console.log(item);
-    console.log("---1---", this.selected_records);
+    // this.selected_product_type = item;
+    // console.log(item);
+    // console.log("---1---", this.selected_records);
+
+    this.product_type_selected = true;
+    this.product_type_key_selected = item["product_type_key"];
+  }
+
+  selectProductTypeL1(item: any){
+    this.product_type_l1_selected = true;
+    this.product_type_key_l1_selected = item["product_type_key"];
+  }
+
+  selectProductTypeL2(item: any){
+    this.product_type_l2_selected = true;
+    this.product_type_key_l2_selected = item["product_type_key"];
   }
 
   changeProductImage(selected_product: any){

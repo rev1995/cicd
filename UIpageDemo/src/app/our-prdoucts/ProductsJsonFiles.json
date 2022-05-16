@@ -9,7 +9,7 @@
       ],
       "product_title": "300 x 200 Series Crates",
       "product_description": "We offer a huge assortment of plastic crates that are serving numerous applications in diverse industries. Our company uses high grade raw material such as polyethylene and are used to hold and carry various types of materials. These can also be offered in customized designs and specifications as per the specific requirements of our clients. These crates are serving numerous applications in diverse manufacturing units, automobile industry, hardware stores and other allied industries. Widely appreciated for their capaciousness and reliability, the industrial trays can be tailored to suit the specific needs of the customers.",
-      "product_type": "crates",
+      "product_type": "series_crates",
       "product_info": [
         {
           "parameter_name": "Variant",
@@ -47,7 +47,7 @@
       ],
       "product_title": "400 x 300 Series Crates",
       "product_description": "We offer a huge assortment of plastic crates that are serving numerous applications in diverse industries. Our company uses high grade raw material such as polyethylene and are used to hold and carry various types of materials. These can also be offered in customized designs and specifications as per the specific requirements of our clients. These crates are serving numerous applications in diverse manufacturing units, automobile industry, hardware stores and other allied industries. Widely appreciated for their capaciousness and reliability, the industrial trays can be tailored to suit the specific needs of the customers.",
-      "product_type": "crates",
+      "product_type": "series_crates",
       "product_info": [
         {
           "parameter_name": "Variant",
@@ -79,7 +79,7 @@
       ],
       "product_title": "500 x 325 Series Crates",
       "product_description": "We offer a huge assortment of plastic crates that are serving numerous applications in diverse industries. Our company uses high grade raw material such as polyethylene and are used to hold and carry various types of materials. These can also be offered in customized designs and specifications as per the specific requirements of our clients. These crates are serving numerous applications in diverse manufacturing units, automobile industry, hardware stores and other allied industries. Widely appreciated for their capaciousness and reliability, the industrial trays can be tailored to suit the specific needs of the customers.",
-      "product_type": "crates",
+      "product_type": "series_crates",
       "product_info": [
         {
           "parameter_name": "Variant",
@@ -117,7 +117,7 @@
       ],
       "product_title": "600 x 400 Series Crates",
       "product_description": "We offer a huge assortment of plastic crates that are serving numerous applications in diverse industries. Our company uses high grade raw material such as polyethylene and are used to hold and carry various types of materials. These can also be offered in customized designs and specifications as per the specific requirements of our clients. These crates are serving numerous applications in diverse manufacturing units, automobile industry, hardware stores and other allied industries. Widely appreciated for their capaciousness and reliability, the industrial trays can be tailored to suit the specific needs of the customers.",
-      "product_type": "crates",
+      "product_type": "series_crates",
       "product_info": [
         {
           "parameter_name": "Variant",
@@ -151,7 +151,7 @@
       ],
       "product_title": "Fruits & Vegetables Crates",
       "product_description": "",
-      "product_type": "crates",
+      "product_type": "vegetable_crates",
       "product_info": []
     },
     {
@@ -164,7 +164,7 @@
       ],
       "product_title": "Dairy Crates",
       "product_description": "",
-      "product_type": "crates",
+      "product_type": "dairy_crates",
       "product_info": []
     },
     {
@@ -174,7 +174,7 @@
       ],
       "product_title": "Bottle Crates",
       "product_description": "",
-      "product_type": "crates",
+      "product_type": "bottle_crates",
       "product_info": []
     },
     {
@@ -188,7 +188,7 @@
       ],
       "product_title": "Fish Crates",
       "product_description": "",
-      "product_type": "crates",
+      "product_type": "fish_crates",
       "product_info": []
     },
     {
@@ -254,5 +254,120 @@
       "product_description": "Injection moulded pallets have enhanced features that enhance the speed, efficiency of product distribution and guarantee product protection along with human safety. These pallets are eco-friendly, thus offering added advantages over wooden pallets.",
       "product_type": "injection_pallets",
       "product_info": []
-    }
+    },
+    {
+        "Name": "Mobile Garbage Bins",
+        "icon": [
+          "../../../assets/Images/ProductImages/mobileBins/mgb_1.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_2.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_3.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_4.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_5.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_6.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_7.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_8.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_9.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_10.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_11.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_12.jpg",
+          "../../../assets/Images/ProductImages/mobileBins/mgb_13.jpg"
+        ],
+        "product_title": "Mobile Garbage Bins",
+        "product_description": "Features: Light weight due to the use of high quality plastic, Long lasting, Easy to use and maintain, Safeguards public health, Prevent diseases, safe for workers, Resistant to UV radiation",
+        "product_type": "mobile_bins",
+        "product_info": []
+      },
+      {
+        "Name": "Plastic Range",
+        "icon": [
+          "../../../assets/Images/ProductImages/litterBins/plasticBins/fsl_1.jpg",
+          "../../../assets/Images/ProductImages/litterBins/plasticBins/fsl_2.jpg",
+          "../../../assets/Images/ProductImages/litterBins/plasticBins/fsl_3.jpg",
+          "../../../assets/Images/ProductImages/litterBins/plasticBins/fsl_4.jpg",
+          "../../../assets/Images/ProductImages/litterBins/plasticBins/fsl_5.jpg",
+          "../../../assets/Images/ProductImages/litterBins/plasticBins/fsl_6.jpg",
+          "../../../assets/Images/ProductImages/litterBins/plasticBins/fsl_7.jpg",
+          "../../../assets/Images/ProductImages/litterBins/plasticBins/fsl_8.jpg"
+        ],
+        "product_title": "Plastic Range",
+        "product_description": "Features: High durability, Easy maintenance, Withstand adverse weather conditions, Wide range of colours includes, new marble and sandstone design",
+        "product_type": "plastic_litter_bins",
+        "product_info": []
+      },
+      {
+        "Name": "SS Range",
+        "icon": [
+          "../../../assets/Images/ProductImages/litterBins/ssBins/fsl_9.jpg",
+          "../../../assets/Images/ProductImages/litterBins/ssBins/fsl_10.jpg",
+          "../../../assets/Images/ProductImages/litterBins/ssBins/fsl_11.jpg",
+          "../../../assets/Images/ProductImages/litterBins/ssBins/fsl_12.jpg",
+          "../../../assets/Images/ProductImages/litterBins/ssBins/fsl_13.jpg"
+        ],
+        "product_title": "SS Range",
+        "product_description": "Features: High durability, Easy maintenance, Withstand adverse weather conditions, Wide range of colours includes, new marble and sandstone design",
+        "product_type": "ss_litter_bins",
+        "product_info": []
+      },
+      {
+        "Name": "FRP Range",
+        "icon": [
+          "../../../assets/Images/ProductImages/litterBins/frpBins/fsl_14.jpg"
+        ],
+        "product_title": "FRP Range",
+        "product_description": "Features: High durability, Easy maintenance, Withstand adverse weather conditions, Wide range of colours includes, new marble and sandstone design",
+        "product_type": "frp_litter_bins",
+        "product_info": []
+      },
+      {
+        "Name": "Storage and Racking Bins",
+        "icon": [
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_1.jpg",
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_2.jpg",
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_3.jpg",
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_4.jpg",
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_5.jpg",
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_6.jpg",
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_7.jpg",
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_8.jpg",
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_9.jpg",
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_10.jpg",
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_11.jpg",
+          "../../../assets/Images/ProductImages/storageBins/storage_bins_12.jpg"
+        ],
+        "product_title": "Storage and Racking Bins",
+        "product_description": "Our storage bins are manufactured from virgin plastic raw material. They are stackable one above the other and available in different colours. It has in built card holders. Some of the bins are available with detachable partitions. Suitable for stores/ assembly lines/ pharmaceuticals/ automobile workshops and various other applications.",
+        "product_type": "storage_racking_bins",
+        "product_info": []
+      },
+      {
+        "Name": "Jumbo Crates",
+        "icon": [
+          "../../../assets/Images/ProductImages/jumboCrates/jumbo_1.jpg",
+          "../../../assets/Images/ProductImages/jumboCrates/jumbo_2.jpg"
+        ],
+        "product_title": "Jumbo Crates",
+        "product_description": "",
+        "product_type": "jumbo_crates",
+        "product_info": []
+      },
+      {
+        "Name": "Accessories",
+        "icon": [
+          "../../../assets/Images/ProductImages/accessories/accessories.jpg"
+        ],
+        "product_title": "Accessories",
+        "product_description": "We also provide crate accessories like card holders and crate elbows to help assist industries in their varying needs.",
+        "product_type": "accessories",
+        "product_info": []
+      },
+      {
+        "Name": "Antistatic and Conductive Crates",
+        "icon": [
+          "../../../assets/Images/ProductImages/antistaticCrates/antistatic.jpg"
+        ],
+        "product_title": "Antistatic and Conductive Crates",
+        "product_description": "We offer complete range of Conductive and Anti-Static crates. The use of highly Specific additives ensure permanent conductive properties. All models are available on order. Highly recommended for electronic, data processing & electrical Industries.",
+        "product_type": "antistatic_crates",
+        "product_info": []
+      }
   ]

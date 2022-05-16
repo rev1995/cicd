@@ -1,22 +1,117 @@
 [
     {
-        "product_type_name": "Crates",
-        "product_type_key": "crates"
+      "product_type_name": "All",
+      "product_type_key": "",
+      "children": []
     },
     {
-        "product_type_name": "Chill pads",
-        "product_type_key": "chill_pads"
+      "product_type_name": "Material Handling",
+      "product_type_key": "material_handling",
+      "children": [
+        {
+          "product_type_name": "Industial Crates",
+          "product_type_key": "industrial_crates",
+          "children": [
+            {
+              "product_type_name": "Series Crates",
+              "product_type_key": "series_crates"
+            },
+            {
+              "product_type_name": "Storage racking bins",
+              "product_type_key": "storage_racking_bins"
+            },
+            {
+              "product_type_name": "Jumbo crates",
+              "product_type_key": "jumbo_crates"
+            },
+            {
+              "product_type_name": "Roto crates",
+              "product_type_key": "roto_crates"
+            },
+            {
+              "product_type_name": "Fabrication crates",
+              "product_type_key": "fabrication_crates"
+            },
+            {
+              "product_type_name": "Accessories",
+              "product_type_key": "accessories"
+            },
+            {
+              "product_type_name": "Antistatic and conduction crates",
+              "product_type_key": "antistatic_crates"
+            }
+          ]
+        },
+        {
+          "product_type_name": "Industial wise crates",
+          "product_type_key": "industrial_wise_crates",
+          "children": [
+            {
+              "product_type_name": "Fruits and Vegetable Crates",
+              "product_type_key": "vegetable_crates"
+            },
+            {
+              "product_type_name": "Dairy Crates",
+              "product_type_key": "dairy_crates"
+            },
+            {
+              "product_type_name": "Fish Crates",
+              "product_type_key": "fish_crates"
+            },
+            {
+              "product_type_name": "Bottle Crates",
+              "product_type_key": "bottle_crates"
+            }
+          ]
+        },
+        {
+          "product_type_name": "Insulated Ice boxes",
+          "product_type_key": "insulated_ice_boxes"
+        },
+        {
+          "product_type_name": "Milk can",
+          "product_type_key": "milk_can"
+        },
+        {
+          "product_type_name": "Chill pads",
+          "product_type_key": "chill_pads"
+        },
+        {
+          "product_type_name": "Roto Moulded pallet",
+          "product_type_key": "roto_pallets"
+        },
+        {
+          "product_type_name": "Injection Moulded pallet",
+          "product_type_key": "injection_pallets"
+        }
+      ]
     },
     {
-        "product_type_name": "Milk can",
-        "product_type_key": "milk_can"
-    },
-    {
-        "product_type_name": "Insulated Ice boxes",
-        "product_type_key": "insulated_ice_boxes"
-    },
-    {
-        "product_type_name": "Injection Moulded pallet",
-        "product_type_key": "injection_pallets"
+      "product_type_name": "Waste Management",
+      "product_type_key": "waste_management",
+      "children": [
+        {
+          "product_type_name": "Mobile Garbage Bins",
+          "product_type_key": "mobile_bins"
+        },
+        {
+          "product_type_name": "Free Stand Litter Bin",
+          "product_type_key": "litter_bins",
+          "children": [
+            {
+              "product_type_name": "Plastic Range",
+              "product_type_key": "plastic_litter_bins"
+            },
+            {
+              "product_type_name": "SS Range",
+              "product_type_key": "ss_litter_bins"
+            },
+            {
+                "product_type_name": "FRP Range",
+                "product_type_key": "frp_litter_bins"
+            }
+          ]
+        }
+      ]
     }
-]
+  ]

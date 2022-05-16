@@ -1,4 +1,4 @@
-<div class="modal modal-center" tabindex="0" role="dialog" [ngStyle]="{'display':displayStyle}" style="margin-left: 230px; margin-top: 200px;">
+<div class="modal modal-center" tabindex="0" role="dialog" [ngStyle]="{'display':displayStyle}" style="margin-left: 230px; margin-top: 120px;">
     <div class="card" style="width: 70%;">
         <h5 class="card-header d-flex justify-content-between align-items-center">
             {{selected_product['Name']}}
@@ -42,16 +42,65 @@
         <h1 class="pageTitleText1 d-inline">All </h1>
         <h1 class="pageTitleText2 d-inline"> Products</h1>
     </div>
+    <!-- <div class="newNav mt-5">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item" *ngFor="let item of product_type_records">
+                <p class="card-product-type btn px-2 mx-3" (click)="selectProductType(item)">{{item["product_type_name"]}}
+                </p>
+                <div *ngIf="product_type_selected && product_type_key_selected == item['product_type_key']">
+                    <ul class="nav nav-pills nav-fill">
+                        <li class="nav-item" *ngFor="let item_l1 of item['children']">
+                            <p class="card-product-type-l1 btn px-2 mx-3" (click)="selectProductTypeL1(item_l1)">
+                                {{item_l1["product_type_name"]}}</p>
+    
+                            <div
+                                *ngIf="product_type_l1_selected && product_type_key_l1_selected == item_l1['product_type_key']">
+                                <ul class="nav nav-pills nav-fill">
+                                    <li class="nav-item" *ngFor="let item_l2 of item_l1['children']">
+                                        <p class="card-product-type-l2 btn px-2 mx-3">{{item_l2["product_type_name"]}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div> -->
     <div class="newNav mt-5">
         <ul class="nav nav-pills nav-fill">
             <li class="nav-item" *ngFor="let item of product_type_records">
-                <p class="btn" (click)="selectProductType(item)">{{item["product_type_name"]}}</p>
+                <p class="card-product-type btn px-2 mx-3" (click)="selectProductType(item)">{{item["product_type_name"]}}
+                </p>
             </li>
         </ul>
     </div>
+    <div *ngFor="let item of product_type_records">
+        <div *ngIf="product_type_selected && product_type_key_selected == item['product_type_key']">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item" *ngFor="let item_l1 of item['children']">
+                    <p class="card-product-type-l1 btn px-2 mx-3" (click)="selectProductTypeL1(item_l1)">
+                        {{item_l1["product_type_name"]}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div *ngFor="let item of product_type_records">
+        <div *ngFor="let item_l1 of item['children']">
+            <div *ngIf="product_type_l1_selected && product_type_key_l1_selected == item_l1['product_type_key']">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item" *ngFor="let item_l2 of item_l1['children']">
+                        <p class="card-product-type-l2 btn px-2 mx-3" (click)="selectProductTypeL2(item_l2)">{{item_l2["product_type_name"]}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="ListCards container mt-5">
-        <div class="card product-card m-3" *ngFor="let item of selected_records" style="width: 18rem;">
-            <div *ngIf="filterProductType(item)">
+        <div *ngFor="let item of records" >
+        <div class="card product-card m-3" *ngIf="item['product_type'] == product_type_key_selected || item['product_type'] == product_type_key_l1_selected || item['product_type'] == product_type_key_l2_selected || product_type_key_selected == '' || product_type_key_l1_selected == '' || product_type_key_l2_selected == ''" style="width: 18rem;">
+            <!-- <div -->
+                <!-- *ngIf="item['product_type'] == product_type_key_selected || item['product_type'] == product_type_key_l1_selected || item['product_type'] == product_type_key_l2_selected || product_type_key_selected == '' || product_type_key_l1_selected == '' || product_type_key_l2_selected == ''"> -->
                 <img class="card-img-top" [src]="item.icon[0]" alt="" (click)="openPopup(item)">
                 <div class="card-body product-card-body">
                     {{item['Name']}}
