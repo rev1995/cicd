@@ -11,6 +11,9 @@ import { OurPrdouctsComponent } from './our-prdoucts/our-prdoucts.component';
 import { AllProductsComponent } from './our-prdoucts/all-products/all-products.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MainNavbarComponent } from './main-navbar/main-navbar.component';
+import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 const routes: Routes = [
   {
@@ -40,6 +43,8 @@ const routerOptions: ExtraOptions = {
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
+    CommonModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

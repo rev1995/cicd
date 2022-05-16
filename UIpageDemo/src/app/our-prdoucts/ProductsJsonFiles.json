@@ -1,42 +1,258 @@
 [
     {
-        "Name": "Chill-Pads",
-        "icon": "../../../assets/Images/product1.jpg"
-    },  
-    {
-        "Name": "Crate1",
-        "icon": "../../../assets/Images/product2.jpg"
+      "Name": "300 x 200 Series Crates",
+      "icon": [
+        "../../../assets/Images/ProductImages/crates/300x200/industrial_crates_1_300x200.jpg",
+        "../../../assets/Images/ProductImages/crates/300x200/industrial_crates_2_300x200.jpg",
+        "../../../assets/Images/ProductImages/crates/300x200/industrial_crates_3_300x200.jpg",
+        "../../../assets/Images/ProductImages/crates/300x200/industrial_crates_4_300x200.jpg"
+      ],
+      "product_title": "300 x 200 Series Crates",
+      "product_description": "We offer a huge assortment of plastic crates that are serving numerous applications in diverse industries. Our company uses high grade raw material such as polyethylene and are used to hold and carry various types of materials. These can also be offered in customized designs and specifications as per the specific requirements of our clients. These crates are serving numerous applications in diverse manufacturing units, automobile industry, hardware stores and other allied industries. Widely appreciated for their capaciousness and reliability, the industrial trays can be tailored to suit the specific needs of the customers.",
+      "product_type": "crates",
+      "product_info": [
+        {
+          "parameter_name": "Variant",
+          "parameter_value": "Completely Closed"
+        },
+        {
+          "parameter_name": "Capacity",
+          "parameter_value": "4 Litres"
+        },
+        {
+          "parameter_name": "Outer Dimensions",
+          "parameter_value": "300 x 200 x 100"
+        },
+        {
+          "parameter_name": "Inner Dimensions",
+          "parameter_value": "265 x 165 x 95"
+        }
+      ]
     },
     {
-        "Name": "Box type",
-        "icon": "../../../assets/Images/product3.jpg"
+      "Name": "400 x 300 Series Crates",
+      "icon": [
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_1_400x300.jpg",
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_2_400x300.jpg",
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_3_400x300.jpg",
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_4_400x300.jpg",
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_5_400x300.jpg",
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_6_400x300.jpg",
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_7_400x300.jpg",
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_8_400x300.jpg",
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_9_400x300.jpg",
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_10_400x300.jpg",
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_11_400x300.jpg",
+        "../../../assets/Images/ProductImages/crates/400x300/industrial_crates_12_400x300.jpg"
+      ],
+      "product_title": "400 x 300 Series Crates",
+      "product_description": "We offer a huge assortment of plastic crates that are serving numerous applications in diverse industries. Our company uses high grade raw material such as polyethylene and are used to hold and carry various types of materials. These can also be offered in customized designs and specifications as per the specific requirements of our clients. These crates are serving numerous applications in diverse manufacturing units, automobile industry, hardware stores and other allied industries. Widely appreciated for their capaciousness and reliability, the industrial trays can be tailored to suit the specific needs of the customers.",
+      "product_type": "crates",
+      "product_info": [
+        {
+          "parameter_name": "Variant",
+          "parameter_value": "Completely Closed"
+        },
+        {
+          "parameter_name": "Capacity",
+          "parameter_value": "4 Litres"
+        },
+        {
+          "parameter_name": "Outer Dimensions",
+          "parameter_value": "300 x 200 x 100"
+        },
+        {
+          "parameter_name": "Inner Dimensions",
+          "parameter_value": "265 x 165 x 95"
+        }
+      ]
     },
     {
-        "Name": "wooden Crate",
-        "icon": "../../../assets/Images/product4.jpg"
+      "Name": "500 x 325 Series Crates",
+      "icon": [
+        "../../../assets/Images/ProductImages/crates/500x325/industrial_crates_1_500x325.jpg",
+        "../../../assets/Images/ProductImages/crates/500x325/industrial_crates_2_500x325.jpg",
+        "../../../assets/Images/ProductImages/crates/500x325/industrial_crates_3_500x325.jpg",
+        "../../../assets/Images/ProductImages/crates/500x325/industrial_crates_4_500x325.jpg",
+        "../../../assets/Images/ProductImages/crates/500x325/industrial_crates_5_500x325.jpg",
+        "../../../assets/Images/ProductImages/crates/500x325/industrial_crates_6_500x325.jpg"
+      ],
+      "product_title": "500 x 325 Series Crates",
+      "product_description": "We offer a huge assortment of plastic crates that are serving numerous applications in diverse industries. Our company uses high grade raw material such as polyethylene and are used to hold and carry various types of materials. These can also be offered in customized designs and specifications as per the specific requirements of our clients. These crates are serving numerous applications in diverse manufacturing units, automobile industry, hardware stores and other allied industries. Widely appreciated for their capaciousness and reliability, the industrial trays can be tailored to suit the specific needs of the customers.",
+      "product_type": "crates",
+      "product_info": [
+        {
+          "parameter_name": "Variant",
+          "parameter_value": "Completely Closed"
+        },
+        {
+          "parameter_name": "Capacity",
+          "parameter_value": "4 Litres"
+        },
+        {
+          "parameter_name": "Outer Dimensions",
+          "parameter_value": "300 x 200 x 100"
+        },
+        {
+          "parameter_name": "Inner Dimensions",
+          "parameter_value": "265 x 165 x 95"
+        }
+      ]
     },
     {
-        "Name": "Plastic Crate",
-        "icon": "../../../assets/Images/product5.jpg"
+      "Name": "600 x 400 Series Crates",
+      "icon": [
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_1_600x400.jpg",
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_2_600x400.jpg",
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_3_600x400.jpg",
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_4_600x400.jpg",
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_5_600x400.jpg",
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_6_600x400.jpg",
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_7_600x400.jpg",
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_8_600x400.jpg",
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_9_600x400.jpg",
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_10_600x400.jpg",
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_11_600x400.jpg",
+        "../../../assets/Images/ProductImages/crates/600x400/industrial_crates_12_600x400.jpg"
+      ],
+      "product_title": "600 x 400 Series Crates",
+      "product_description": "We offer a huge assortment of plastic crates that are serving numerous applications in diverse industries. Our company uses high grade raw material such as polyethylene and are used to hold and carry various types of materials. These can also be offered in customized designs and specifications as per the specific requirements of our clients. These crates are serving numerous applications in diverse manufacturing units, automobile industry, hardware stores and other allied industries. Widely appreciated for their capaciousness and reliability, the industrial trays can be tailored to suit the specific needs of the customers.",
+      "product_type": "crates",
+      "product_info": [
+        {
+          "parameter_name": "Variant",
+          "parameter_value": "Completely Closed"
+        },
+        {
+          "parameter_name": "Capacity",
+          "parameter_value": "4 Litres"
+        },
+        {
+          "parameter_name": "Outer Dimensions",
+          "parameter_value": "300 x 200 x 100"
+        },
+        {
+          "parameter_name": "Inner Dimensions",
+          "parameter_value": "265 x 165 x 95"
+        }
+      ]
     },
     {
-        "Name": "Metal Crate",
-        "icon": "../../../assets/Images/product6.jpg"
+      "Name": "Fruits & Vegetables Crates",
+      "icon": [
+        "../../../assets/Images/ProductImages/vegetableCrates/fv_1.jpg",
+        "../../../assets/Images/ProductImages/vegetableCrates/fv_2.jpg",
+        "../../../assets/Images/ProductImages/vegetableCrates/fv_3.jpg",
+        "../../../assets/Images/ProductImages/vegetableCrates/fv_4.jpg",
+        "../../../assets/Images/ProductImages/vegetableCrates/fv_5.jpg",
+        "../../../assets/Images/ProductImages/vegetableCrates/fv_6.jpg",
+        "../../../assets/Images/ProductImages/vegetableCrates/fv_7.jpg",
+        "../../../assets/Images/ProductImages/vegetableCrates/fv_8.jpg"
+      ],
+      "product_title": "Fruits & Vegetables Crates",
+      "product_description": "",
+      "product_type": "crates",
+      "product_info": []
     },
     {
-        "Name": "PP Crates",
-        "icon": "../../../assets/Images/product7.jpg"
+      "Name": "Dairy Crates",
+      "icon": [
+        "../../../assets/Images/ProductImages/dairyCrates/dairy_crates_1.jpg",
+        "../../../assets/Images/ProductImages/dairyCrates/dairy_crates_2.jpg",
+        "../../../assets/Images/ProductImages/dairyCrates/dairy_crates_3.jpg",
+        "../../../assets/Images/ProductImages/dairyCrates/dairy_crates_4.jpg"
+      ],
+      "product_title": "Dairy Crates",
+      "product_description": "",
+      "product_type": "crates",
+      "product_info": []
     },
     {
-        "Name": "Chill-Pads",
-        "icon": "../../../assets/Images/product8.jpg"
+      "Name": "Bottle Crates",
+      "icon": [
+        "../../../assets/Images/ProductImages/bottleCrates/bottle_crate.jpg"
+      ],
+      "product_title": "Bottle Crates",
+      "product_description": "",
+      "product_type": "crates",
+      "product_info": []
     },
     {
-        "Name": "Box type",
-        "icon": "../../../assets/Images/product9.jpg"
+      "Name": "Fish Crates",
+      "icon": [
+        "../../../assets/Images/ProductImages/fishCrates/fish_crates_1.jpg",
+        "../../../assets/Images/ProductImages/fishCrates/fish_crates_2.jpg",
+        "../../../assets/Images/ProductImages/fishCrates/fish_crates_3.jpg",
+        "../../../assets/Images/ProductImages/fishCrates/fish_crates_4.jpg",
+        "../../../assets/Images/ProductImages/fishCrates/fish_crates_5.jpg"
+      ],
+      "product_title": "Fish Crates",
+      "product_description": "",
+      "product_type": "crates",
+      "product_info": []
     },
     {
-        "Name": "Metal Crate",
-        "icon": "../../../assets/Images/product10.jpg"
+      "Name": "Insulated Ice Boxes",
+      "icon": [
+        "../../../assets/Images/ProductImages/insulatedIceBoxes/ice_box_1.jpg",
+        "../../../assets/Images/ProductImages/insulatedIceBoxes/ice_box_2.jpg",
+        "../../../assets/Images/ProductImages/insulatedIceBoxes/ice_box_3.jpg",
+        "../../../assets/Images/ProductImages/insulatedIceBoxes/ice_box_4.jpg",
+        "../../../assets/Images/ProductImages/insulatedIceBoxes/ice_box_5.jpg",
+        "../../../assets/Images/ProductImages/insulatedIceBoxes/ice_box_6.jpg",
+        "../../../assets/Images/ProductImages/insulatedIceBoxes/ice_box_7.jpg",
+        "../../../assets/Images/ProductImages/insulatedIceBoxes/ice_box_8.jpg"
+      ],
+      "product_title": "Insulated Ice Boxes",
+      "product_description": "Our Ice Boxes are available with and without vending lid and with and without drain holes. We offer a wide range of ice boxes that are manufactured using qualitative raw material. These have gained wide appreciation for their optimum quality. The ice box is used to store perishable goods, ice cream, cold drinks, fish and others. These are used during the outings like in beaches and many more.",
+      "product_type": "insulated_ice_boxes",
+      "product_info": []
+    },
+    {
+      "Name": "Milk Cans",
+      "icon": [
+        "../../../assets/Images/ProductImages/milkCans/milk_can.jpg"
+      ],
+      "product_title": "Milk Cans",
+      "product_description": "Our plastic Milk Cans are made with high quality material and also it's economical. It's easy to clean due to its smooth inside and outside surfaces.",
+      "product_type": "milk_can",
+      "product_info": []
+    },
+    {
+      "Name": "Chill Pads",
+      "icon": [
+        "../../../assets/Images/ProductImages/chillPads/chill_pads_1.jpg",
+        "../../../assets/Images/ProductImages/chillPads/chill_pads_2.jpg",
+        "../../../assets/Images/ProductImages/chillPads/chill_pads_3.jpg"
+      ],
+      "product_title": "Chill Pads",
+      "product_description": "Chill pads are used to preserve perishable food products like meat, and ice creams for long time in ice boxes. Chill pads increase the shelf life of perishable food items.",
+      "product_type": "chill_pads",
+      "product_info": []
+    },
+    {
+      "Name": "Roto Moulded Pallet",
+      "icon": [
+        "../../../assets/Images/ProductImages/rotoPallets/roto_pallet_1.jpg",
+        "../../../assets/Images/ProductImages/rotoPallets/roto_pallet_2.jpg",
+        "../../../assets/Images/ProductImages/rotoPallets/roto_pallet_3.jpg",
+        "../../../assets/Images/ProductImages/rotoPallets/roto_pallet_4.jpg",
+        "../../../assets/Images/ProductImages/rotoPallets/roto_pallet_5.jpg",
+        "../../../assets/Images/ProductImages/rotoPallets/roto_pallet_6.jpg"
+      ],
+      "product_title": "Roto Moulded Pallet",
+      "product_description": "Our pallets are used in many industries like Textile, Pharmaceuticals, Engineering components, etc. Pallets are available in varying sizes, capacity and features. Plastic pallets are replacing wood at an ever increasing rate in the manufacturing and distribution environment. Companies realize that plastic pallets are lightweight, splinter free, recyclable, and extremely durable when compared to wood.",
+      "product_type": "roto_pallets",
+      "product_info": []
+    },
+    {
+      "Name": "Injection Moulded pallet",
+      "icon": [
+        "../../../assets/Images/ProductImages/injectionPallets/injection_pallet.jpg"
+      ],
+      "product_title": "Injection Moulded pallet",
+      "product_description": "Injection moulded pallets have enhanced features that enhance the speed, efficiency of product distribution and guarantee product protection along with human safety. These pallets are eco-friendly, thus offering added advantages over wooden pallets.",
+      "product_type": "injection_pallets",
+      "product_info": []
     }
-]
+  ]

@@ -1,0 +1,22 @@
+[
+    {
+        "product_type_name": "Crates",
+        "product_type_key": "crates"
+    },
+    {
+        "product_type_name": "Chill pads",
+        "product_type_key": "chill_pads"
+    },
+    {
+        "product_type_name": "Milk can",
+        "product_type_key": "milk_can"
+    },
+    {
+        "product_type_name": "Insulated Ice boxes",
+        "product_type_key": "insulated_ice_boxes"
+    },
+    {
+        "product_type_name": "Injection Moulded pallet",
+        "product_type_key": "injection_pallets"
+    }
+]

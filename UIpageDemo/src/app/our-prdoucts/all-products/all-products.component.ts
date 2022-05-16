@@ -1,6 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import ProductsJsonFiles from '../../our-prdoucts/ProductsJsonFiles.json'
+import ProductTypesJson from '../../our-prdoucts/ProductTypes.json'
 @Component({
   selector: 'app-all-products',
   templateUrl: './all-products.component.html',
@@ -12,6 +13,8 @@ export class AllProductsComponent implements OnInit {
   ngOnInit(): void {
   }
   public records = ProductsJsonFiles;
+  public selected_records = ProductsJsonFiles;
+  public product_type_records = ProductTypesJson;
   goDown1() {
     this.scroller.scrollToAnchor("aboutUS");
   }
@@ -26,6 +29,73 @@ export class AllProductsComponent implements OnInit {
   }
   goDown5() {
     this.scroller.scrollToAnchor("contactUs");
+  }
+
+  displayStyle = "none";
+  s = "none";
+
+  selectedImageIndex: number = 0;
+
+  selected_product = {"Name": "Product Name", "product_info": [], "product_title": "", "product_description": "", "icon": ""};
+  selected_product_type = {"product_type_name": "", "product_type_key": ""}
+
+  openPopup(item: any) {
+    this.selectedImageIndex = 0;
+    this.displayStyle = "block";
+    this.selected_product = item;
+  }
+  closePopup() {
+    this.displayStyle = "none";
+  }
+
+  selectProductType(item: any){
+    this.selected_product_type = item;
+    console.log(item);
+    console.log("---1---", this.selected_records);
+  }
+
+  changeProductImage(selected_product: any){
+    // var img1 = document.getElementById("imgClickAndChange");
+    // img1. = imgs[imgs.indexOf(img.src) + (dir || 1)] || imgs[dir ? imgs.length - 1 : 0];
+    if (this.selectedImageIndex < selected_product["icon"].length){
+      this.selectedImageIndex ++;
+    }else{
+      this.selectedImageIndex = 0;
+    }
+
+    this.filterProductType(selected_product);
+
+  }
+
+  // getImageSrc(){
+    
+  // }
+
+  filterProductType(item: any) {
+    this.selected_records = this.records; 
+    console.log("---2---", this.selected_records);
+    console.log("---2a---", item['product_type'], "---", this.selected_product_type['product_type_key'])
+    if (item['product_type'] == this.selected_product_type['product_type_key'] || this.selected_product_type['product_type_key'] == '') {
+      // for (var each_record of this.records) {
+      //   if (this.selected_product_type['product_type_key'] != '' && each_record["product_type"]){
+      //     each_record.
+      //   }
+      // }
+      for (let i = 0; i < this.selected_records.length; i++){
+        console.log("---3---", this.selected_product_type['product_type_key'], "----", this.selected_records[i]["product_type"]);
+        if (this.selected_product_type['product_type_key'] != '' && this.selected_records[i]["product_type"]){
+          this.selected_records.splice(i, 1);
+          console.log("---4---", this.selected_records);
+        }
+      }
+      console.log("---5---", this.selected_records);
+      return true;
+    }
+    return false;
+  }
+
+  updateDiv(){
+    // .$( "#here" ).load(window.location.href + " #here" );
   }
 
 }
