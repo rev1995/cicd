@@ -2,8 +2,9 @@
 FROM node:latest AS node 
 WORKDIR /app 
 COPY UIpageDemo .
-RUN npm install
-RUN npm run build --prod
+RUN npm cache clean --force
+RUN npm install --legacy-peer-deps
+RUN npm run build --omit=dev
 
 # Stage 2
 FROM nginx:alpine
