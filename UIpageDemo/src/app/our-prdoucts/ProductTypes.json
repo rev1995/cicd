@@ -11,6 +11,7 @@
         {
           "product_type_name": "Industial Crates",
           "product_type_key": "industrial_crates",
+          "product_type_icon": "../../../assets/Images/Icons/industrial_crate.png",
           "children": [
             {
               "product_type_name": "Series Crates",
@@ -45,6 +46,7 @@
         {
           "product_type_name": "Industial wise crates",
           "product_type_key": "industrial_wise_crates",
+          "product_type_icon": "../../../assets/Images/Icons/industrial_crate.png",
           "children": [
             {
               "product_type_name": "Fruits and Vegetable Crates",
@@ -66,23 +68,28 @@
         },
         {
           "product_type_name": "Insulated Ice boxes",
-          "product_type_key": "insulated_ice_boxes"
+          "product_type_key": "insulated_ice_boxes",
+          "product_type_icon": "../../../assets/Images/Icons/ice_box.png"
         },
         {
           "product_type_name": "Milk can",
-          "product_type_key": "milk_can"
+          "product_type_key": "milk_can",
+          "product_type_icon": "../../../assets/Images/Icons/milk_can.png"
         },
         {
           "product_type_name": "Chill pads",
-          "product_type_key": "chill_pads"
+          "product_type_key": "chill_pads",
+          "product_type_icon": "../../../assets/Images/Icons/cooling_pad.png"
         },
         {
           "product_type_name": "Roto Moulded pallet",
-          "product_type_key": "roto_pallets"
+          "product_type_key": "roto_pallets",
+          "product_type_icon": "../../../assets/Images/Icons/pallets.png"
         },
         {
           "product_type_name": "Injection Moulded pallet",
-          "product_type_key": "injection_pallets"
+          "product_type_key": "injection_pallets",
+          "product_type_icon": "../../../assets/Images/Icons/pallets.png"
         }
       ]
     },
@@ -92,11 +99,13 @@
       "children": [
         {
           "product_type_name": "Mobile Garbage Bins",
-          "product_type_key": "mobile_bins"
+          "product_type_key": "mobile_bins",
+          "product_type_icon": "../../../assets/Images/Icons/garbage_bin.png"
         },
         {
           "product_type_name": "Free Stand Litter Bin",
           "product_type_key": "litter_bins",
+          "product_type_icon": "../../../assets/Images/Icons/litter_bin.png",
           "children": [
             {
               "product_type_name": "Plastic Range",

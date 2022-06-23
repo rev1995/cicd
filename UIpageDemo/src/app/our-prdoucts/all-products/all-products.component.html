@@ -75,12 +75,17 @@
             </li>
         </ul>
     </div>
-    <div *ngFor="let item of product_type_records">
+    <div *ngFor="let item of product_type_records" style="align-items: center;">
         <div *ngIf="product_type_selected && product_type_key_selected == item['product_type_key']">
             <ul class="nav nav-pills nav-fill">
                 <li class="nav-item" *ngFor="let item_l1 of item['children']">
-                    <p class="card-product-type-l1 btn px-2 mx-3" (click)="selectProductTypeL1(item_l1)">
-                        {{item_l1["product_type_name"]}}</p>
+                    <div class="card card-product-l1 m-3" style="align-items: center; max-width: 200px;" (click)="selectProductTypeL1(item_l1)">
+                        <!-- <p class="card-product-type-l1 btn px-2 mx-3" (click)="selectProductTypeL1(item_l1)">
+                            {{item_l1["product_type_name"]}}</p> -->
+                        <img class="card-img-product" src="{{item_l1['product_type_icon']}}" style="height: 100px; width: 100px;" alt="Random first slide">
+                        <p>
+                            {{item_l1["product_type_name"]}}</p>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -89,8 +94,8 @@
         <div *ngFor="let item_l1 of item['children']">
             <div *ngIf="product_type_l1_selected && product_type_key_l1_selected == item_l1['product_type_key']">
                 <ul class="nav nav-pills nav-fill">
-                    <li class="nav-item" *ngFor="let item_l2 of item_l1['children']">
-                        <p class="card-product-type-l2 btn px-2 mx-3" (click)="selectProductTypeL2(item_l2)">{{item_l2["product_type_name"]}}</p>
+                    <li class="nav-item" *ngFor="let item_l2 of item_l1['children']">                        
+                        <p class="card-product-type-l2 btn px-2 mx-3" style="color: white;" (click)="selectProductTypeL2(item_l2)">{{item_l2["product_type_name"]}}</p>
                     </li>
                 </ul>
             </div>
