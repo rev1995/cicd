@@ -4,19 +4,22 @@
         <h1 class="pageTitleText1 d-inline">Contact</h1>
         <h1 class="pageTitleText2 d-inline"> Us</h1>
     </div>
-    <div class="otherInfo">
-        <div class="row p-5">
-            <div class="col-4 text-center">
-                <p class="contactText">We are available on all worling days from 9 AM IST to 8 PM IST</p>
+    <div class="contact-content row">
+            <div class="col contact-form">
+                <p class="form-text mx-2">Lets Keep in touch</p>
+                <input type="text" placeholder="Your Name" [(ngModel)]="nameS" class="contact-input mx-2 mt-3">
+                <input type="email" placeholder="Your Email" class="contact-input mx-2 mt-3">
+                <textarea placeholder=" Message " class="contact-textarea mx-2 mt-3"></textarea>
             </div>
-            <div class="col-4 text-center">
-                <p class="contactText">Email : rcvmarketing@gmail.com</p>
-                <p class="contactText">contact : 7358030034 / 9840023483</p>
+            <div class="col location-maps">
+                <agm-map [latitude]="lat" [longitude]="lng">
+                    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                </agm-map>
+                <p class="loc-Text m-0">CHENNAI</p>
+                <agm-map [latitude]="lat" [longitude]="lng">
+                    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                </agm-map>
+                <p class="loc-Text m-0">BANGALORE</p>
             </div>
-            <div class="col-4 text-center">
-                <p class="contactText">No.3 1803, Madhanandhapuram, Kundrathur road, Chennai - 600116, TamilNAdu, India
-                </p>
-            </div>
-        </div>
     </div>
 </div>

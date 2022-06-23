@@ -96,10 +96,11 @@
             </div>
         </div>
     </div>
-    <div class="ListCards container mt-5">
-        <div *ngFor="let item of records" >
-        <div class="card product-card m-3" *ngIf="item['product_type'] == product_type_key_selected || item['product_type'] == product_type_key_l1_selected || item['product_type'] == product_type_key_l2_selected || product_type_key_selected == '' || product_type_key_l1_selected == '' || product_type_key_l2_selected == ''" style="width: 18rem;">
-            <!-- <div -->
+    <div class="ListCards container mt-5 pb-5">
+        <div *ngFor="let item of records">
+            <div class="card product-card m-3" *ngIf="item['product_type'] == product_type_key_selected || item['product_type'] == product_type_key_l1_selected || item['product_type'] == product_type_key_l2_selected || product_type_key_selected == '' || product_type_key_l1_selected == '' || product_type_key_l2_selected == ''"
+                style="width: 18rem;">
+                <!-- <div -->
                 <!-- *ngIf="item['product_type'] == product_type_key_selected || item['product_type'] == product_type_key_l1_selected || item['product_type'] == product_type_key_l2_selected || product_type_key_selected == '' || product_type_key_l1_selected == '' || product_type_key_l2_selected == ''"> -->
                 <img class="card-img-top" [src]="item.icon[0]" alt="" (click)="openPopup(item)">
                 <div class="card-body product-card-body">

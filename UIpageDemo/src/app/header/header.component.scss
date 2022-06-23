@@ -3,14 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap');
 
-html, body {
-    min-height: 100vh;
-  }
 .backImg {
-    background: rgb(233,236,239);
-    background: linear-gradient(90deg, rgba(233,236,239,1) 0%, rgba(222,226,230,1) 35%, rgba(173,181,189,1) 100%);
-    width: 100vw;
+    min-width: 100vw;
     min-height: 100%;
+    border-bottom: 2px solid black;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
 }
 
 .one {
@@ -24,7 +23,7 @@ html, body {
 .nav-link,
 .navbar-collapse {
     font-family: 'Montserrat', sans-serif;
-    color: rgba($color:#e7ecef, $alpha: 1.0) !important;
+    color: rgba($color: #e7ecef, $alpha: 1.0) !important;
 }
 
 .nav-link:focus {
@@ -104,49 +103,60 @@ html, body {
 
 .card {
     height: 500px;
+    border-radius: 2rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    padding: 0% ;
+    padding: 0%;
 }
-.row{
+
+.row {
     width: 100% !important;
     height: 100%;
 }
+
 .pageTitle {
-    margin-top: 40px;
+    margin-top: 60px;
     font-family: 'Source Serif Pro', serif;
-    background: rgb(173,181,189);
-    background: linear-gradient(90deg, rgba(173,181,189,1) 0%, rgba(233,236,239,1) 35%, rgba(173,181,189,1) 100%);
+    background: linear-gradient(90deg, rgba(51, 51, 51, 1) 0%, rgba(73, 80, 87, 1) 35%, rgba(51, 51, 51, 1) 100%);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.pageTitleText1{
+
+.pageTitleText1 {
     color: #DE1616;
 }
 
-.img-fluid{
+.img-fluid {
+    border-radius: 2rem;
     height: 100%;
     width: 100%;
 }
-.contentCard{
+
+.contentCard {
+    border-radius: 2rem;
     width: 50%;
     height: 100%;
     padding: 0%;
 }
+
 .contentCard1 {
+    border-radius: 2rem;
     width: 50%;
     height: 100%;
     background: #f8f9fa;
     padding: 10px;
 }
-.contentText{
+
+.contentText {
     font-family: 'Montserrat';
     color: #343a40;
     padding: 20px;
     font-size: 15px;
 }
-.contentHeadingText2{
+
+.contentHeadingText2 {
     font-family: 'Source Serif Pro', serif;
     color: #DE1616;
 }
+
 .card-body {
     padding-left: 15%;
     padding-right: 15%;
@@ -156,4 +166,14 @@ html, body {
         font-family: 'Montserrat', sans-serif;
         color: #343a40;
     }
+}
+
+.first-position {
+    margin-left: 100px !important;
+    margin-right: 200px !important;
+}
+
+.second-position {
+    margin-left: 400px !important;
+    margin-right: 100px !important;
 }

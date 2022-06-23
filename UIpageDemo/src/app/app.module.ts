@@ -13,7 +13,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MainNavbarComponent } from './main-navbar/main-navbar.component';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { AgmCoreModule } from '@agm/core';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -37,14 +38,19 @@ const routerOptions: ExtraOptions = {
     OurPrdouctsComponent,
     AllProductsComponent,
     ContactUsComponent,
-    MainNavbarComponent
+    MainNavbarComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
     CommonModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBqdXuM_Zf9CwzKtaNqwuA4k7y1UCiawak'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,28 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
-.logo-One,.logo-Two{
+.logo-One,
+.logo-Two {
     font-family: 'Monoton', cursive;
 }
-.logoRed{
+
+.logoRed {
     color: #ed393c;
 }
 
-.navbar{
+.navbar {
     background-color: #333333;
     width: 100vw;
 }
-.nav-link{
+
+.nav-link {
     font-family: 'Source Serif Pro', serif;
     color: #E6E7E8;
     cursor: pointer;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: #DE1616;
     cursor: pointer;
 }
-.nav-link:active{
-    color: #3a0ca3;
+
+.nav-link:active {
+    color: #DE1616;
     cursor: pointer;
 }
-

@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss']
 })
+
 export class ContactUsComponent implements OnInit {
   constructor(private scroller: ViewportScroller) { }
+  lat =  13.01336287708171;
+  lng =  80.13309995492935;
 
+  nameS: any = '';
   ngOnInit(): void {
   }
   goDown1() {

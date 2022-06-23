@@ -3,9 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap');
 
-
 .backImg {
-    background-color: #b7dcee;
+    // background-color: #b7dcee;
+    // background: #4CA1AF;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #caf0f8, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #caf0f8, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width:  100vw;
     min-height: 100vh;
 }
