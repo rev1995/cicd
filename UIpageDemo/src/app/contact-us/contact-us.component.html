@@ -7,18 +7,23 @@
     <div class="contact-content row">
             <div class="col contact-form">
                 <p class="form-text mx-2">Lets Keep in touch</p>
-                <input type="text" placeholder="Your Name" [(ngModel)]="nameS" class="contact-input mx-2 mt-3">
-                <input type="email" placeholder="Your Email" class="contact-input mx-2 mt-3">
-                <textarea placeholder=" Message " class="contact-textarea mx-2 mt-3"></textarea>
+                <input type="text" placeholder="Your Name" [(ngModel)]="userName" class="contact-input mx-2 mt-3">
+                <input type="email" placeholder="Your Email" [(ngModel)]="userEmail" class="contact-input mx-2 mt-3">
+                <textarea placeholder=" Message " [(ngModel)]="userMessage" class="contact-textarea mx-2 mt-3"></textarea>
+                <div class="mt-2 mx-2">
+                    <button class="btn btn-success">
+                        Submit
+                    </button>
+                </div>
             </div>
             <div class="col location-maps">
-                <agm-map [latitude]="lat" [longitude]="lng">
+                <!-- <agm-map [latitude]="lat" [longitude]="lng">
                     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-                </agm-map>
+                </agm-map> -->
                 <p class="loc-Text m-0">CHENNAI</p>
-                <agm-map [latitude]="lat" [longitude]="lng">
+                <!-- <agm-map [latitude]="lat" [longitude]="lng">
                     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-                </agm-map>
+                </agm-map> -->
                 <p class="loc-Text m-0">BANGALORE</p>
             </div>
     </div>

@@ -12,7 +12,9 @@ export class ContactUsComponent implements OnInit {
   lat =  13.01336287708171;
   lng =  80.13309995492935;
 
-  nameS: any = '';
+  userName: any = '';
+  userEmail : any =  '';
+  userMessage : any = ''; 
   ngOnInit(): void {
   }
   goDown1() {

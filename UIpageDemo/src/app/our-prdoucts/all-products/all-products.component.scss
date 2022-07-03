@@ -5,12 +5,8 @@
     width: 100vw;
     min-height: 100vh;
     background: #232526;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #414345, #232526);
-    // background: rgb(122,19,19);
-    // background: linear-gradient(90deg, rgba(122,19,19,1) 0%, rgba(73,5,5,1) 70%, rgba(43,9,9,1) 100%);         
+    background: linear-gradient(to right, #414345, #232526);    
     border-bottom: 1px solid black;
 }
 
@@ -22,9 +18,6 @@
     color: rgba($color: #3f37c9, $alpha: 1.0) !important;
 }
 
-// .navbar-brand{
-//     color: rgba($color: #035AA6, $alpha: 1.0)  !important;
-// }
 .nav-link,
 .navbar-collapse {
     font-family: 'Montserrat', sans-serif;
@@ -84,37 +77,24 @@
 }
 
 .newNav {
-    // background-color: #ced4da;
-    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
     .nav-item {
         font-family: 'Montserrat';
 
         .btn:hover {
-            color: #fffb00;
-            // font-weight: bold;
-            // background-color: #adb5bd;
-        }
-
-        .btn:focus {
-            color: #fffb00;
+            color: #DE1616 !important;
             font-weight: bold;
-            // background-color: #adb5bd;
         }
+
+        .btn:active {
+            color: #DE1616 !important;
+            font-weight: bold;
+        }
+
     }
-
-    // .nav-item:hover {
-    //     color: #a4161a;
-    //     font-family: 'Montserrat';
-    //     background-color: #adb5bd;
-    // }
-
     .nav-item:active {
-        color: #a4161a;
+        color: #a4161a !important;
         font-family: 'Montserrat';
-        background-color: #adb5bd;
     }
-
 }
 
 
@@ -131,14 +111,21 @@
 
 .product-card {
     border-radius: 5px 5px 5px 5px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    box-shadow: none;
+}
+.prod-container{
+    justify-content: center;
+    width: 18rem;
+}
+.prod-container:hover{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: (0px 20px 30px grey);
 }
 
 .card-img-top {
-    // background: url() center fixed no-repeat;
-    width: 18rem;
-    height: 15vw;
-    object-fit: cover;
+     background: url();
+    // width: 18rem;
+    // height: 15vw;
 }
 
 .ListCards {
@@ -160,15 +147,24 @@
 }
 
 .card-product-type {
+    margin: 0 !important;
+    width: 100% !important;
+    background-color: #414345;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 }
 
 .card-product-type-l1 {
+    margin: 0 !important;
+    width: 100% !important;
+    background-color: #414345;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .card-product-type-l2 {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin: 0 !important;
+    width: 100% !important;
+    background-color: #414345;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .card-product-l1 {
@@ -176,4 +172,9 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     border-top-width: thick;
     border-top-color: grey;
+}
+
+.image-style{
+    background-position: center;
+    width: 18rem;
 }
