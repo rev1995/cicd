@@ -56,17 +56,21 @@ export class AllProductsComponent implements OnInit {
   }
 
   selectProductType(item: any){
-    // this.selected_product_type = item;
-    // console.log(item);
-    // console.log("---1---", this.selected_records);
-
     this.product_type_selected = true;
     this.product_type_key_selected = item["product_type_key"];
+    if (item["product_type_key"] === "") {
+      this.product_type_l1_selected = false;
+    }
   }
 
   selectProductTypeL1(item: any){
+    this.product_type_l2_selected = false;
     this.product_type_l1_selected = true;
+    this.product_type_key_l2_selected = item["product_type_key"];
     this.product_type_key_l1_selected = item["product_type_key"];
+    if (!item.hasOwnProperty('children')) {
+      this.product_type_l2_selected = false;
+    }
   }
 
   selectProductTypeL2(item: any){
@@ -75,8 +79,6 @@ export class AllProductsComponent implements OnInit {
   }
 
   changeProductImage(selected_product: any){
-    // var img1 = document.getElementById("imgClickAndChange");
-    // img1. = imgs[imgs.indexOf(img.src) + (dir || 1)] || imgs[dir ? imgs.length - 1 : 0];
     if (this.selectedImageIndex < selected_product["icon"].length){
       this.selectedImageIndex ++;
     }else{
@@ -87,20 +89,11 @@ export class AllProductsComponent implements OnInit {
 
   }
 
-  // getImageSrc(){
-    
-  // }
-
   filterProductType(item: any) {
     this.selected_records = this.records; 
     console.log("---2---", this.selected_records);
     console.log("---2a---", item['product_type'], "---", this.selected_product_type['product_type_key'])
     if (item['product_type'] == this.selected_product_type['product_type_key'] || this.selected_product_type['product_type_key'] == '') {
-      // for (var each_record of this.records) {
-      //   if (this.selected_product_type['product_type_key'] != '' && each_record["product_type"]){
-      //     each_record.
-      //   }
-      // }
       for (let i = 0; i < this.selected_records.length; i++){
         console.log("---3---", this.selected_product_type['product_type_key'], "----", this.selected_records[i]["product_type"]);
         if (this.selected_product_type['product_type_key'] != '' && this.selected_records[i]["product_type"]){
@@ -113,9 +106,4 @@ export class AllProductsComponent implements OnInit {
     }
     return false;
   }
-
-  updateDiv(){
-    // .$( "#here" ).load(window.location.href + " #here" );
-  }
-
 }

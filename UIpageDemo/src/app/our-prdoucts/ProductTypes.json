@@ -89,7 +89,8 @@
         {
           "product_type_name": "Injection Moulded pallet",
           "product_type_key": "injection_pallets",
-          "product_type_icon": "../../../assets/Images/Icons/pallets.png"
+          "product_type_icon": "../../../assets/Images/Icons/pallets.png",
+          "children": []
         }
       ]
     },

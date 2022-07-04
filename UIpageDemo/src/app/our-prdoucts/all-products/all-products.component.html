@@ -42,46 +42,19 @@
         <h1 class="pageTitleText1 d-inline">All </h1>
         <h1 class="pageTitleText2 d-inline"> Products</h1>
     </div>
-    <!-- <div class="newNav mt-5">
-        <ul class="nav nav-pills nav-fill">
-            <li class="nav-item" *ngFor="let item of product_type_records">
-                <p class="card-product-type btn px-2 mx-3" (click)="selectProductType(item)">{{item["product_type_name"]}}
-                </p>
-                <div *ngIf="product_type_selected && product_type_key_selected == item['product_type_key']">
-                    <ul class="nav nav-pills nav-fill">
-                        <li class="nav-item" *ngFor="let item_l1 of item['children']">
-                            <p class="card-product-type-l1 btn px-2 mx-3" (click)="selectProductTypeL1(item_l1)">
-                                {{item_l1["product_type_name"]}}</p>
-    
-                            <div
-                                *ngIf="product_type_l1_selected && product_type_key_l1_selected == item_l1['product_type_key']">
-                                <ul class="nav nav-pills nav-fill">
-                                    <li class="nav-item" *ngFor="let item_l2 of item_l1['children']">
-                                        <p class="card-product-type-l2 btn px-2 mx-3">{{item_l2["product_type_name"]}}</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div> -->
     <div class="newNav mt-5">
-        <ul class="nav nav-pills nav-fill">
+        <ul class="nav d-flex justify-content-around">
             <li class="nav-item" *ngFor="let item of product_type_records">
                 <p class="card-product-type btn" style="color: white;" (click)="selectProductType(item)">{{item["product_type_name"]}}
                 </p>
             </li>
         </ul>
     </div>
-    <div *ngFor="let item of product_type_records" style="align-items: center;">
+    <div *ngFor="let item of product_type_records" style="align-items: center;" class="mt-2">
         <div *ngIf="product_type_selected && product_type_key_selected == item['product_type_key']">
-            <ul class="nav nav-pills nav-fill">
-                <li class="nav-item" *ngFor="let item_l1 of item['children']">
+            <ul class="nav d-flex flex-wrap mx-auto">
+                <li class="nav-item mx-3" *ngFor="let item_l1 of item['children']">
                     <div class="card card-product-l1 m-3" style="align-items: center; max-width: 200px;" (click)="selectProductTypeL1(item_l1)">
-                        <!-- <p class="card-product-type-l1 btn px-2 mx-3" (click)="selectProductTypeL1(item_l1)">
-                            {{item_l1["product_type_name"]}}</p> -->
                         <img class="card-img-product" src="{{item_l1['product_type_icon']}}" style="height: 100px; width: 100px;" alt="Random first slide">
                         <p>
                             {{item_l1["product_type_name"]}}</p>
@@ -90,26 +63,24 @@
             </ul>
         </div>
     </div>
-    <div *ngFor="let item of product_type_records">
-        <div *ngFor="let item_l1 of item['children']">
-            <div *ngIf="product_type_l1_selected && product_type_key_l1_selected == item_l1['product_type_key']">
-                <ul class="nav nav-pills nav-fill">
-                    <li class="nav-item" *ngFor="let item_l2 of item_l1['children']">                        
-                        <p class="card-product-type-l2 btn px-2 mx-3" style="color: white;" (click)="selectProductTypeL2(item_l2)">{{item_l2["product_type_name"]}}</p>
-                    </li>
-                </ul>
+    <div *ngFor="let item of product_type_records" class="mt-3">
+            <div *ngFor="let item_l1 of item?.['children']">
+                <div *ngIf="product_type_l1_selected && product_type_key_l1_selected == item_l1['product_type_key']">
+                    <ul class="nav d-flex justify-content-around">
+                        <li class="nav-item" *ngFor="let item_l2 of item_l1['children']">
+                            <p class="card-product-type-l2 btn px-2 mx-3" style="color: white;"
+                                (click)="selectProductTypeL2(item_l2)">{{item_l2["product_type_name"]}}</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
     </div>
-    <div class="ListCards container mt-5 pb-5">
+    <div class="d-flex flex-wrap pb-5 Listcards">
         <div *ngFor="let item of records">
-            <div class="prod-container m-3">
+            <div class="prod-container my-3 mx-4"
+                *ngIf="item['product_type'] == product_type_key_selected || item['product_type'] == product_type_key_l1_selected || item['product_type'] == product_type_key_l2_selected || product_type_key_selected == '' || product_type_key_l1_selected == '' || product_type_key_l2_selected == ''">
                 <img class="image-style" [src]="item.icon[0]" alt="Products" (click)="openPopup(item)">
-                <div class="card product-card"
-                    *ngIf="item['product_type'] == product_type_key_selected || item['product_type'] == product_type_key_l1_selected || item['product_type'] == product_type_key_l2_selected || product_type_key_selected == '' || product_type_key_l1_selected == '' || product_type_key_l2_selected == ''"
-                    style="width: 18rem;">
-                    <!-- <div -->
-                    <!-- *ngIf="item['product_type'] == product_type_key_selected || item['product_type'] == product_type_key_l1_selected || item['product_type'] == product_type_key_l2_selected || product_type_key_selected == '' || product_type_key_l1_selected == '' || product_type_key_l2_selected == ''"> -->
+                <div class="card product-card" style="width: 18rem;" (click)="openPopup(item)">
                     <div class="card-body product-card-body">
                         {{item['Name']}}
                     </div>
