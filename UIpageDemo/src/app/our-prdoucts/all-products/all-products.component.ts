@@ -17,6 +17,14 @@ export class AllProductsComponent implements OnInit {
   public records = ProductsJsonFiles;
   public selected_records = ProductsJsonFiles;
   public product_type_records = ProductTypesJson;
+  public autoSlide = false;
+
+  autoSlideImages() {
+    setInterval(() => {
+      this.onNextClick();
+    }, 5000);
+  }
+
   goDown1() {
     this.scroller.scrollToAnchor("aboutUS");
   }
@@ -49,9 +57,15 @@ export class AllProductsComponent implements OnInit {
     this.triggerOpenPopup = true;
     this.selected_product = item;
     this.selectedImageIndex = 0;
+    this.autoSlide = true;
+    if (this.autoSlide) {
+      this.autoSlideImages();
+    }
   }
+
   closePopup() {
     this.triggerOpenPopup = false;
+    this.autoSlide = false;
   }
 
   selectProductType(item: any){
@@ -101,4 +115,21 @@ export class AllProductsComponent implements OnInit {
   //   }
   //   return false;
   // }
+
+  onPrevClick() {
+    if (this.selectedImageIndex === 0) {
+      this.selectedImageIndex = this.selected_product['icon'].length - 1;
+    } else {
+      this.selectedImageIndex--;
+    }
+  }
+  onNextClick() {
+    if (this.selectedImageIndex === this.selected_product['icon'].length - 1) {
+      this.selectedImageIndex = 0;
+    } else {
+      this.selectedImageIndex++;
+    }
+    console.log(this.selected_product);
+    console.log(this.records);
+  }
 }

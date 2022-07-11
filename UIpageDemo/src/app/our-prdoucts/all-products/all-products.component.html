@@ -44,34 +44,16 @@
                 {{selected_product['Name']}}
                 <button type="button" style="background-color: transparent; color: black; border-color: transparent;" class="btn btn-sm btn-primary" (click)="closePopup()">x</button>
             </h5>
-            <div class="row w-100 m-0 p-0">
-                <div class="col">
-                        <div id="carouselExampleControls" class="carousel slide w-100" data-bs-ride="carousel">
-                            <div class="carousel-inner w-100">
-                                <!-- <div class="carousel-item" *ngFor="let each_image of selected_product['icon'];let index = index;"
-                                [ngClass]="{'active': index == 0 }">
-                                    <img [src]="each_image" class="card-img-product" [alt]="each_image"> 
-                                    {{selected_product['icon'].length}} {{index}} {{selected_product['Name']}}
-                                  </div> -->
-                                <!-- <ul *ngFor="let each_image of selected_product['icon'];let i=index; first as isFirst">
-                                    <div [ngClass]="isFirst ? 'carousel-item active' : 'carousel-item' ">
-                                        <li><img src={{each_image}} class="card-img-product" alt="...">
-                                            {{selected_product['icon'].length}} {{i}} {{selected_product['Name']}}
-                                        </li>
-                                    </div>
-                                </ul> -->
-                                <a class="carousel-control-prev" data-bs-target="#carouselExampleControls" role="button" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Prev</span>
-                                </a>
-                                <a class="carousel-control-next" data-bs-target="#carouselExampleControls" role="button" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </a>
-                            </div>
-                        </div>
+            <div class="row w-100 m-0 p-0 overflow-auto">
+                <div class="col-6">
+                        <div *ngIf="selected_product['icon'] && selected_product['icon'].length > 0" class="carousel-container">
+                            <img *ngFor="let each_image of selected_product['icon'];let i= index" [src]="each_image" [alt]="each_image"
+                                [ngClass]="{'image-active': selectedImageIndex === i}">
+                                <button class="btn btn-carousel btn-prev py-2 px-1" (click)="onPrevClick()"><</button>
+                                <button class="btn btn-carousel btn-next py-2 px-1" (click)="onNextClick()">></button>
+                        </div>           
                 </div>
-                <div class="col">
+                <div class="col-6">
                         <div class="card-body flex-column h-100">
                             <div class="prod-info">
                                 <h5 class="card-title py-2" style="border-bottom: solid grey 1px;">Product Information</h5>
