@@ -74,6 +74,7 @@
 .product-card-body {
     width: 18rem;
     background-color: #e9ecef;
+    height: 15% !important;
 }
 
 .newNav {
@@ -109,12 +110,8 @@
     color: #DE1616;
 }
 
-.product-card {
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: none;
-}
 .prod-container{
-    justify-content: center;
+    height: 18rem;
     width: 18rem;
 }
 .prod-container:hover{
@@ -138,9 +135,8 @@
 
 .card-img-product {
     background: url() center fixed no-repeat;
-    width: 100%;
-    height: 32vw;
     object-fit: cover;
+    width:100%;
 }
 
 .card-product-type {
@@ -176,4 +172,49 @@
 .image-style{
     background-position: center;
     width: 18rem;
+    height: 85% !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+   
+   .carousel-control-next-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+   }
+
+.popup-size{
+    width: 55rem;
+    height: 30rem;
+     display: block;
+     position: fixed;
+     margin: 0 !important;
+     left: 17%;
+     bottom: 15%;
+     z-index: 2; 
+     cursor: pointer;
+}
+.card-body{
+    padding: 0.4rem;
+}
+.popup-card{
+    margin: 0 !important;
+    width: 100%;
+}
+
+.prod-info {
+    height: 40%;
+}
+
+.prod-desc {
+    height: 60%;
+}
+
+.card-text {
+    margin: 0;
+}
+
+.card-text-desc {
+    margin: 0;
+    font-size: 0.85rem;
 }

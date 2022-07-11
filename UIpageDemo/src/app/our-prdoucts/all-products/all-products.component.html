@@ -1,40 +1,3 @@
-<div class="modal modal-center" tabindex="0" role="dialog" [ngStyle]="{'display':displayStyle}" style="margin-left: 230px; margin-top: 120px;">
-    <div class="card" style="width: 70%;">
-        <h5 class="card-header d-flex justify-content-between align-items-center">
-            {{selected_product['Name']}}
-            <button type="button" style="background-color: transparent; color: black; border-color: transparent;" class="btn btn-sm btn-primary" (click)="closePopup()">x</button>
-        </h5>
-        <div class="row p-3">
-            <div class="col-sm-6">
-                <div class="card border-0">
-                    <!-- <img class="card-img-top" id="imgClickAndChange" src="{{selected_product['icon'][selectedImageIndex]}}" alt="Card image cap" (click)="changeProductImage(selected_product)"> -->
-                    <ngb-carousel>
-                        <ng-template ngbSlide *ngFor="let each_image of selected_product['icon']">
-                            <div class="picsum-img-wrapper">
-                                <img  class="card-img-product" src="{{each_image}}" alt="Random first slide">
-                            </div>
-                        </ng-template>
-                    </ngb-carousel>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card product-info">
-                    <div class="card-body">
-                        <h5 class="card-title py-2" style="border-bottom: solid grey 1px;">Product Information</h5>
-                        <p class="card-text" *ngFor="let info_item of selected_product['product_info']" >{{info_item["parameter_name"]}}: {{info_item["parameter_value"]}}</p>
-                    </div>
-                </div>
-                <div class="card border-0">
-                    <div class="card-body">
-                        <h5 class="card-title">{{selected_product["product_title"]}}</h5>
-                        <p class="card-text">{{selected_product["product_description"]}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <div class="backImg">
     <div class="pt-3"></div>
@@ -75,16 +38,63 @@
                 </div>
             </div>
     </div>
+    <div *ngIf="triggerOpenPopup" class="modal modal-center" tabindex="0" role="dialog" class="popup-size">
+         <div class="popup-card card d-flex">
+            <h5 class="card-header d-flex justify-content-between align-items-center">
+                {{selected_product['Name']}}
+                <button type="button" style="background-color: transparent; color: black; border-color: transparent;" class="btn btn-sm btn-primary" (click)="closePopup()">x</button>
+            </h5>
+            <div class="row w-100 m-0 p-0">
+                <div class="col">
+                        <div id="carouselExampleControls" class="carousel slide w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner w-100">
+                                <!-- <div class="carousel-item" *ngFor="let each_image of selected_product['icon'];let index = index;"
+                                [ngClass]="{'active': index == 0 }">
+                                    <img [src]="each_image" class="card-img-product" [alt]="each_image"> 
+                                    {{selected_product['icon'].length}} {{index}} {{selected_product['Name']}}
+                                  </div> -->
+                                <!-- <ul *ngFor="let each_image of selected_product['icon'];let i=index; first as isFirst">
+                                    <div [ngClass]="isFirst ? 'carousel-item active' : 'carousel-item' ">
+                                        <li><img src={{each_image}} class="card-img-product" alt="...">
+                                            {{selected_product['icon'].length}} {{i}} {{selected_product['Name']}}
+                                        </li>
+                                    </div>
+                                </ul> -->
+                                <a class="carousel-control-prev" data-bs-target="#carouselExampleControls" role="button" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Prev</span>
+                                </a>
+                                <a class="carousel-control-next" data-bs-target="#carouselExampleControls" role="button" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                <div class="col">
+                        <div class="card-body flex-column h-100">
+                            <div class="prod-info">
+                                <h5 class="card-title py-2" style="border-bottom: solid grey 1px;">Product Information</h5>
+                                <p class="card-text" *ngFor="let info_item of selected_product['product_info']" >{{info_item["parameter_name"]}}: {{info_item["parameter_value"]}}</p>
+                            </div>
+                            <div class="prod-desc">
+                                <h5 class="card-title">{{selected_product["product_title"]}}</h5>
+                                <p class="card-text-desc">{{selected_product["product_description"]}}</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
     <div class="d-flex flex-wrap pb-5 Listcards">
         <div *ngFor="let item of records">
             <div class="prod-container my-3 mx-4"
                 *ngIf="item['product_type'] == product_type_key_selected || item['product_type'] == product_type_key_l1_selected || item['product_type'] == product_type_key_l2_selected || product_type_key_selected == '' || product_type_key_l1_selected == '' || product_type_key_l2_selected == ''">
                 <img class="image-style" [src]="item.icon[0]" alt="Products" (click)="openPopup(item)">
-                <div class="card product-card" style="width: 18rem;" (click)="openPopup(item)">
-                    <div class="card-body product-card-body">
+                    <div class="product-card-body text-center" (click)="openPopup(item)">
                         {{item['Name']}}
                     </div>
-                </div>
             </div>
         </div>
     </div>
