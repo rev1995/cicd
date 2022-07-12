@@ -136,13 +136,23 @@
 .card-img-product {
     background: url() center fixed no-repeat;
     object-fit: cover;
-    width:100%;
+    width: 100%;
 }
 
 .card-product-type {
     margin: 0 !important;
     width: 100% !important;
     background-color: #414345;
+}
+
+.card-product-type:hover,
+.card-product-type:active {
+    color: #DE1616 !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.card-product-type:focus {
+    color: #DE1616 !important;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 }
 
@@ -159,15 +169,29 @@
     background-color: #414345;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+.card-product-type-l2:active ,.card-product-type-l2:hover {
+    color: #DE1616 !important;
+}
+.card-product-type-l2:focus {
+    color: #DE1616 !important;
+}
 
 .card-product-l1 {
-    height: 80%;
-    width: 100%;
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    border-top-width: thick;
-    border-top-color: grey;
-}
+        height: 11rem ;
+        border-radius: 5px 5px 5px 5px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        border-top-width: 0.6rem;
+        border-top-color: grey;
+    }
+    
+    .card-product-l1:active,
+    .card-product-l1:hover {
+        border-top-color: #DE1616 !important;
+    }
+    
+    .card-product-l1:focus {
+        border-top-color: #DE1616 !important;
+    }
 
 .image-style{
     background-position: center;
@@ -195,8 +219,10 @@
      cursor: pointer;
 }
 .card-body{
-    padding: 0.4rem;
+    padding: 0.3rem;
+    background-color: #f8f9fa;
 }
+
 .popup-card{
     margin: 0 !important;
     width: 100%;
@@ -217,6 +243,7 @@
 .card-text-desc {
     margin: 0;
     font-size: 0.85rem;
+    padding: 0.3rem;
 }
 .carousel-container{
     width: 100%;
@@ -249,8 +276,10 @@
      border: none;
  }
 
- .btn-carousel:active,  .btn-carousel:hover {
-    //  border: 0.5px solid gray;
-    //  background-color: #a8dadc ;
+ .btn-carousel:active,  .btn-carousel:hover  {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+ 
+ .btn-carousel:focus{
+    border: none !important;
  }

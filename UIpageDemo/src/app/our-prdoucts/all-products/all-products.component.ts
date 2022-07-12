@@ -9,6 +9,7 @@ import ProductTypesJson from '../../our-prdoucts/ProductTypes.json'
 })
 export class AllProductsComponent implements OnInit {
   public triggerOpenPopup: boolean = false;
+  public eachProductParameter: any;
   constructor(private scroller: ViewportScroller) { }
 
   ngOnInit(): void {
@@ -41,10 +42,10 @@ export class AllProductsComponent implements OnInit {
     this.scroller.scrollToAnchor("contactUs");
   }
 
-  selectedImageIndex: number = 0;
+  public selectedImageIndex: number = 0;
 
-  selected_product = {"Name": "Product Name", "product_info": [], "product_title": "", "product_description": "", "icon": ""};
-  selected_product_type = {"product_type_name": "", "product_type_key": ""}
+  selected_product = { "Name": "Product Name", "product_info": [], "product_title": "", "product_description": "", "icon": "" };
+  selected_product_type = { "product_type_name": "", "product_type_key": "" }
 
   product_type_selected = false;
   product_type_l1_selected = false;
@@ -68,15 +69,16 @@ export class AllProductsComponent implements OnInit {
     this.autoSlide = false;
   }
 
-  selectProductType(item: any){
+  selectProductType(item: any) {
     this.product_type_selected = true;
+    this.product_type_l1_selected = false;
     this.product_type_key_selected = item["product_type_key"];
     if (item["product_type_key"] === "") {
       this.product_type_l1_selected = false;
     }
   }
 
-  selectProductTypeL1(item: any){
+  selectProductTypeL1(item: any) {
     this.product_type_l2_selected = false;
     this.product_type_l1_selected = true;
     this.product_type_key_l2_selected = item["product_type_key"];
@@ -86,50 +88,24 @@ export class AllProductsComponent implements OnInit {
     }
   }
 
-  selectProductTypeL2(item: any){
+  selectProductTypeL2(item: any) {
     this.product_type_l2_selected = true;
     this.product_type_key_l2_selected = item["product_type_key"];
   }
 
-  // changeProductImage(selected_product: any){
-  //   if (this.selectedImageIndex < selected_product["icon"].length){
-  //     this.selectedImageIndex ++;
-  //   }else{
-  //     this.selectedImageIndex = 0;
-  //   }
-
-  // filterProductType(item: any) {
-  //   this.selected_records = this.records; 
-  //   console.log("---2---", this.selected_records);
-  //   console.log("---2a---", item['product_type'], "---", this.selected_product_type['product_type_key'])
-  //   if (item['product_type'] == this.selected_product_type['product_type_key'] || this.selected_product_type['product_type_key'] == '') {
-  //     for (let i = 0; i < this.selected_records.length; i++){
-  //       console.log("---3---", this.selected_product_type['product_type_key'], "----", this.selected_records[i]["product_type"]);
-  //       if (this.selected_product_type['product_type_key'] != '' && this.selected_records[i]["product_type"]){
-  //         this.selected_records.splice(i, 1);
-  //         console.log("---4---", this.selected_records);
-  //       }
-  //     }
-  //     console.log("---5---", this.selected_records);
-  //     return true;
-  //   }
-  //   return false;
-  // }
-
   onPrevClick() {
     if (this.selectedImageIndex === 0) {
-      this.selectedImageIndex = this.selected_product['icon'].length - 1;
+      this.selectedImageIndex = this.selected_product['product_info'].length - 1;
     } else {
       this.selectedImageIndex--;
     }
   }
+  
   onNextClick() {
-    if (this.selectedImageIndex === this.selected_product['icon'].length - 1) {
+    if (this.selectedImageIndex === this.selected_product['product_info'].length - 1) {
       this.selectedImageIndex = 0;
     } else {
       this.selectedImageIndex++;
     }
-    console.log(this.selected_product);
-    console.log(this.records);
   }
 }
