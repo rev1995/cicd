@@ -10,7 +10,7 @@ steps:
   id: 'build-image-myapp'
   waitFor: ['clone'] 
 
-#Push to Artifact registry
+#Push to Artifact registry.
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID']
   id: 'push-image-to-artifact-registry'
