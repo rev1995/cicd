@@ -1,0 +1,11 @@
+steps:
+#Clone from Google Cloud Source Repo
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone','https://source.developers.google.com/p/cloudbox-357907/r/github_rev1995_cicd']
+  id: 'clone'
+
+#Docker build.
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us-east1-docker.pkg.dev/cloudbox-357907/cicd-repo/myapp:$BUILD_ID', '-f', 'UIpageDemo/Dockerfile', '.']
+  id: 'build-image-myapp'
+  waitFor: ['clone']
