@@ -21,11 +21,11 @@ steps:
   args:
   - 'run'
   - 'deploy'
-  - 'myawesomeapp'
+  - 'rcventures'
   - '--image'
   - 'us-east1-docker.pkg.dev/${PROJECT_ID}/cicd-repo/myapp:$BUILD_ID'
   - '--region'
-  - 'us-east4'
+  - 'us-east1'
   - '--platform'
   - 'managed'
   - '--allow-unauthenticated'
