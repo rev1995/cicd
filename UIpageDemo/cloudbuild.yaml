@@ -1,18 +1,18 @@
 steps:
 #Clone from Google Cloud Source Repo
 - name: 'gcr.io/cloud-builders/git'
-  args: ['clone','https://source.developers.google.com/p/endless-gamma-333908/r/github_rev1995_cicd']
+  args: ['clone','https://source.developers.google.com/p/${PROJECT_ID}/r/github_rev1995_cicd']
   id: 'clone'
 
 #Docker build.
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID', '-f', 'UIpageDemo/Dockerfile', '.']
+  args: ['build', '-t', 'us-east1-docker.pkg.dev/${PROJECT_ID}/cicd-repo/myapp:$BUILD_ID', '-f', 'UIpageDemo/Dockerfile', '.']
   id: 'build-image-myapp'
   waitFor: ['clone'] 
 
 #Push to Artifact registry.
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID']
+  args: ['push', 'us-east1-docker.pkg.dev/${PROJECT_ID}/cicd-repo/myapp:$BUILD_ID']
   id: 'push-image-to-artifact-registry'
   waitFor: ['build-image-myapp']
 
@@ -23,7 +23,7 @@ steps:
   - 'deploy'
   - 'myawesomeapp'
   - '--image'
-  - 'us-east1-docker.pkg.dev/endless-gamma-333908/cicd-repo/myapp:$BUILD_ID'
+  - 'us-east1-docker.pkg.dev/${PROJECT_ID}/cicd-repo/myapp:$BUILD_ID'
   - '--region'
   - 'us-east4'
   - '--platform'
